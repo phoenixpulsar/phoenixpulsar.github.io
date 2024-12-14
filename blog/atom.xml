@@ -18,6 +18,7 @@
 <p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p>
 <p>Regular blog authors can be added to <code>authors.yml</code>.</p>
 <p>The blog post date can be extracted from filenames, such as:</p>
+<p>Testing if this makes it to the blog</p>
 <ul>
 <li><code>2019-05-30-welcome.md</code></li>
 <li><code>2019-05-30-welcome/index.md</code></li>
