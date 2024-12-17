@@ -150,3 +150,57 @@ export const Highlight = ({children, color}) => (
 This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
 
 This is <Highlight color="#1877F2">Facebook blue</Highlight> !
+
+```bash
+#!/usr/bin/env bash
+
+# This script checks if a given service is running and restarts it if not.
+SERVICE="nginx"
+
+if ! pgrep -x "$SERVICE" > /dev/null; then
+  echo "$SERVICE is not running. Restarting..."
+  sudo systemctl start $SERVICE
+else
+  echo "$SERVICE is running."
+fi
+```
+
+```rust
+fn main() {
+    let numbers = vec![10, 20, 30, 40];
+
+    let doubled: Vec<i32> = numbers.iter().map(|x| x * 2).collect();
+    println!("Original: {:?}", numbers);
+    println!("Doubled: {:?}", doubled);
+}
+```
+
+```css
+.button {
+  background: #4CAF50;
+  color: #fff;
+}
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Web Page</title>
+</head>
+<body>
+  <h1>Hello World</h1>
+</body>
+</html>
+```
+
+```lua
+local limit = 100
+local a, b = 0, 1
+while a <= limit do
+  io.write(a, " ")
+  a, b = b, a + b
+end
+io.write("\n")
+```

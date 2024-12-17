@@ -5,26 +5,45 @@
  */
 
 /* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+.architects-daughter-regular {
+  font-family: "Architects Daughter", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+/* Light Theme - Poppin' and Lockin' */
+:root {
+  --ifm-color-primary: #ff5733; /* Vibrant orange-red */
+  --ifm-color-primary-dark: #e64c2c; /* Slightly darker orange-red */
+  --ifm-color-primary-darker: #cc4527;
+  --ifm-color-primary-darkest: #b23c21;
+  --ifm-color-primary-light: #ff704d; /* Light and punchy */
+  --ifm-color-primary-lighter: #ff8a66;
+  --ifm-color-primary-lightest: #ffa380;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(
+    255,
+    87,
+    51,
+    0.1
+  ); /* Soft highlight */
+}
+
+/* Dark Theme - Electric and Modern */
+[data-theme="dark"] {
+  --ifm-color-primary: #8e44ad; /* Vibrant purple */
+  --ifm-color-primary-dark: #7b3a94; /* Slightly darker purple */
+  --ifm-color-primary-darker: #69327e;
+  --ifm-color-primary-darkest: #582a69;
+  --ifm-color-primary-light: #a154c6; /* Electric purple */
+  --ifm-color-primary-lighter: #b36bdb;
+  --ifm-color-primary-lightest: #c685f0;
+  --docusaurus-highlighted-code-line-bg: rgba(
+    142,
+    68,
+    173,
+    0.2
+  ); /* Soft purple highlight */
 }

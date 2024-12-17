@@ -8,8 +8,9 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "Phoenix Pulsar's Tech Journal",
+  tagline:
+    "Welcome to my tech journal\u2014a raw mix of notes and thoughts on the technologies I\u2019m diving into.",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -73,72 +74,30 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/logo.jpeg",
       navbar: {
-        title: "My Site",
+        title: "Home",
         logo: {
-          alt: "My Site Logo",
-          src: "img/logo.svg",
+          alt: "Home",
+          src: "img/logo.jpeg",
         },
         items: [
           {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
             position: "left",
-            label: "Tutorial",
+            label: "Tech Notes",
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/phoenixpulsar",
             label: "GitHub",
             position: "right",
           },
         ],
       },
       footer: {
-        style: "dark",
-        links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Tutorial",
-                to: "/docs/intro",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Crafted with precision and curiosity`,
       },
       prism: {
         theme: prismThemes.github,

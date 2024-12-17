@@ -1,11 +1,149 @@
-.features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+.featuresContainer {
+  padding: 20px;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+/* Grid Layout */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  gap: 20px;
+}
+
+.projectLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Card Styling */
+.featureCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 350px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #121619;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+}
+
+/* Title Row at the Top */
+.featureTopRow {
+  background-color: #f0f0f0;
+  padding: 8px 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.featureTitleTop {
+  margin: 0;
+  font-size: 1.1em;
+  color: #333333;
+}
+
+/* Image Container */
+.featureImageContainer {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.featureImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Overlay (Hover Content) */
+.featureOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #121619;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  opacity: 0;
+  overflow-y: auto;
+  transition: opacity 0.3s ease;
+}
+
+.featureOverlay h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2em;
+  color: #000000;
+}
+
+.featureOverlay p {
+  font-size: 1.3rem;
+  color: #555555;
+  margin: 0;
+  overflow-y: scroll;
+}
+
+/* Hide GIF on Hover */
+.featureCard:hover .featureImage {
+  opacity: 0;
+}
+
+.featureCard:hover .featureOverlay {
+  opacity: 1;
+}
+
+/* Bio Content Styling (For First Card) */
+.featureBioContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.featureDescription {
+  padding-top: 20px;
+  font-size: 1.3rem;
+  color: #555555;
+  line-height: 1.5;
+}
+
+/* Buttons in the Bio Card (Optional) */
+.button {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 12px;
+}
+
+.button--secondary {
+  background-color: #e0e0e0;
+  color: #333333;
+  border: 1px solid #ccc;
+}
+
+.button--secondary:hover {
+  background-color: #d4d4d4;
+}
+
+.button--lg {
+  font-size: 1.1rem;
+  padding: 12px 24px;
+}
+
+a:hover {
+  text-decoration: none;
 }

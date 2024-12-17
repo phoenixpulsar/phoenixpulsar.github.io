@@ -1,64 +1,92 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import clsx from "clsx";
+import Heading from "@theme/Heading";
+import styles from "./styles.module.css";
+import Link from "@docusaurus/Link";
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
+    title: "About Phoenix Pulsar",
+    href: "/blog",
+    src: "",
+    description:
+      "Howdy! Welcome to my notes on technology. In this space, I will document my learning journey into the technologies I am particularly interested in. This serves as a personal repository, a place to bookmark concepts, put ideas into my own words, and create cheat sheets for quick reference. Hopefully, this might also help someone else who shares an interest in these technologies.We’ll be diving into topics like the NEAR blockchain and developer productivity, which are currently at the top of the list. But I’ll definitely stay curious and wander down interesting tangents as they come up.Follow along as I embrace confusion, stumble through the process, and learn while building some cool stuff!",
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
+    title: "Ordo One Encryption App",
+    href: "https://ordo-one-app.web.app/",
+    src: "img/ordo.gif",
+    description:
+      "An encryption app built as a learning playground to explore cryptography concepts like hashing and encryption. While Firebase was used for hosting, this project also served as a sandbox to experiment with Firebase Functions, Firebase Authentication, and the Stripe API. Built without modern frameworks, it relies solely on modern JavaScript and a few NPM libraries (GSAP, Firebase, and SASS). I explored GSAP's timeline features for animation orchestration and added PWA functionality, making this app a standalone, installable PWA.",
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    title: "NGINX Server",
+    href: "https://phoenixpulsar.ink/",
+    src: "img/my-server.gif",
+    description:
+      "I set up a VPS (Ubuntu droplet) on DigitalOcean and secured it by disabling root access and configuring SSH keys. After purchasing a domain, I updated the name servers to point to DigitalOcean and linked the domain to the server. Next, I installed HTTPS using Certbot, created a Node.js API, and used PM2 to manage its continuous operation and handle automatic restarts. I added NGINX as a reverse proxy and completed the setup with a custom HTML welcome page.",
   },
 ];
 
-function Feature({Svg, title, description}) {
-  return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
+function Feature({ title, description, href, src, isBio }) {
+  if (isBio) {
+    return (
+      <a href="/blog" className={styles.projectLink}>
+        <div className={styles.featureCard}>
+          {/* Title Row at the Top */}
+          <div className={styles.featureTopRow}>
+            <h3 className={styles.featureTitleTop}>{title}</h3>
+          </div>
+
+          {/* Bio Content */}
+          <div className={styles.featureBioContent}>
+            <p className={styles.featureDescription}>{description}</p>
+          </div>
+        </div>
+      </a>
+    );
+  } else {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.projectLink}
+      >
+        <div className={styles.featureCard}>
+          {/* Title Row at the Top */}
+          <div className={styles.featureTopRow}>
+            <h3 className={styles.featureTitleTop}>{title}</h3>
+          </div>
+
+          {/* Image Container */}
+          <div className={styles.featureImageContainer}>
+            {src && (
+              <img
+                src={src}
+                alt={`${title} GIF`}
+                className={styles.featureImage}
+              />
+            )}
+            {/* Overlay Content */}
+            <div className={styles.featureOverlay}>
+              <p className={styles.featureDescription}>{description}</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    );
+  }
 }
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
-      </div>
-    </section>
+    <div className={styles.featuresContainer}>
+      <h1>Featured Projects</h1>
+      <section className={styles.featuresGrid}>
+        {FeatureList.map((props, idx) => (
+          <Feature key={idx} {...props} isBio={idx === 0} />
+        ))}
+      </section>
+    </div>
   );
 }
