@@ -5,8 +5,6 @@ authors: [phoenixpulsar]
 # tags: [facebook, hello, docusaurus]
 ---
 
-<!-- truncate -->
-
 Welcome to my notes on technology. In this space, I will document my learning journey into the technologies I am particularly interested in.
 
 This serves as a personal repository, a place to bookmark concepts, put ideas into my own words, and create cheat sheets for quick reference.
