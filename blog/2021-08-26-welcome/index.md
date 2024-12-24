@@ -1,31 +1,20 @@
 ---
 slug: welcome
 title: Welcome
-authors: [slorber, yangshun]
-tags: [facebook, hello, docusaurus]
+authors: [phoenixpulsar]
+# tags: [facebook, hello, docusaurus]
 ---
-
-[Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).
-
-Here are a few tips you might find useful.
 
 <!-- truncate -->
 
-Simply add Markdown files (or folders) to the `blog` directory.
+Welcome to my notes on technology. In this space, I will document my learning journey into the technologies I am particularly interested in.
 
-Regular blog authors can be added to `authors.yml`.
+This serves as a personal repository, a place to bookmark concepts, put ideas into my own words, and create cheat sheets for quick reference.
 
-The blog post date can be extracted from filenames, such as:
+Hopefully, this might also help someone else who shares an interest in these technologies.
 
-Testing if this makes it to the blog
+We’ll be diving into topics like the NEAR blockchain and developer productivity, which are currently at the top of the list.
 
-- `2019-05-30-welcome.md`
-- `2019-05-30-welcome/index.md`
+But I’ll definitely stay curious and wander down interesting tangents as they come up.
 
-A blog post folder can be convenient to co-locate blog post images:
-
-![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)
-
-The blog supports tags as well!
-
-**And if you don't want a blog**: just delete this directory, and use `blog: false` in your Docusaurus config.
+Follow along as I embrace confusion, stumble through the process, and learn while building some cool stuff!
