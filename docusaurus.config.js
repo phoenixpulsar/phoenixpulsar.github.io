@@ -10,7 +10,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config = {
   title: "Phoenix Pulsar's Tech Journal",
   tagline:
-    "Welcome to my tech journal\u2014a raw mix of notes and thoughts on the technologies I\u2019m diving into.",
+    "Welcome to my NEAR blockchain tech journal\u2014a and raw mix of notes and thoughts on some other technologies I\u2019m diving into.",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here

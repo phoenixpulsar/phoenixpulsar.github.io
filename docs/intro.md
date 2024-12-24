@@ -7,6 +7,8 @@ sidebar_position: 1
 ## Getting Started
 
 This site was built with **[docusaurus.io](https://docusaurus.io/)**.
+Docusaurus is a **static-site-generator** (also called **[Jamstack](https://jamstack.org/)**).
+It builds your site as simple **static HTML, JavaScript and CSS files**.
 I chose Docusaurus for its strong community, ease of customization, and built-in features that make it simple to organize and host technical notes and blog posts.
 
 ## Start your site
