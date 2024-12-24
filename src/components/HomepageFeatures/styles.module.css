@@ -22,7 +22,7 @@
   overflow: hidden;
   height: 350px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #e0e5ea;
+  background-color: #f0f0f0;
   position: relative;
   transition: transform 0.3s ease;
 }
