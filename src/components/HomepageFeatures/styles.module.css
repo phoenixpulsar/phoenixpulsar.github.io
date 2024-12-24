@@ -22,7 +22,7 @@
   overflow: hidden;
   height: 350px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #121619;
+  background-color: #e0e5ea;
   position: relative;
   transition: transform 0.3s ease;
 }
@@ -35,7 +35,6 @@
 .featureTopRow {
   background-color: #f0f0f0;
   padding: 8px 12px;
-  border-bottom: 1px solid #ddd;
   text-align: left;
 }
 
@@ -69,7 +68,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #121619;
+  background-color: #f0f0f0;
   padding: 12px;
   display: flex;
   flex-direction: column;
