@@ -2,12 +2,11 @@ phoenixpulsar:
   name: Phoenix Pulsar
   title: Technomancer of Code and Connection
   url: https://github.com/phoenixpulsar
-  image_url: https://github.com/yangshun.png
+  image_url: https://github.com/phoenixpulsar.png
   page: true
   socials:
     x: pulsar_phoenix
     github: phoenixpulsar
-    newsletter: https://phoenixpulsar.ink
 # slorber:
 #   name: Sébastien Lorber
 #   title: Docusaurus maintainer
