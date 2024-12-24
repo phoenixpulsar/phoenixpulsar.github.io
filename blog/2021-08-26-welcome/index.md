@@ -11,7 +11,7 @@ This serves as a personal repository, a place to bookmark concepts, put ideas in
 
 Hopefully, this might also help someone else who shares an interest in these technologies.
 
-We’ll be diving into topics like the NEAR blockchain and developer productivity, which are currently at the top of the list.
+We’ll be diving into topics like the [NEAR blockchain](https://near.org) and developer productivity, which are currently at the top of the list.
 
 But I’ll definitely stay curious and wander down interesting tangents as they come up.
 
