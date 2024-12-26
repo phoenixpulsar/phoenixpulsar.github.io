@@ -30,7 +30,7 @@ const FeatureList = [
 function Feature({ title, description, href, src, isBio }) {
   if (isBio) {
     return (
-      <a href="/blog" className={styles.projectLink}>
+      <a href="{href}" className={styles.projectLink}>
         <div className={styles.featureCard}>
           {/* Title Row at the Top */}
           <div className={styles.featureTopRow}>

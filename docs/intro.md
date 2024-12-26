@@ -2,18 +2,18 @@
 sidebar_position: 1
 ---
 
-# About this blog -
+# About
 
 This site was built with **[docusaurus.io](https://docusaurus.io/)**.
 Docusaurus is a **static-site-generator** (also called **[Jamstack](https://jamstack.org/)**).
 It builds your site as simple **static HTML, JavaScript and CSS files**.
-I chose Docusaurus for its strong community, ease of customization, and built-in features that make it simple to organize and host technical notes and blog posts.
+I chose Docusaurus for its strong community, ease of customization, and built-in features that make it simple to organize and host _technical_ notes and _blog_ posts.
 
 - Read the [official documentation](https://docusaurus.io/)
 
-## Start
+## Development
 
-Run the development server:
+Development server:
 
 ```bash
 cd blog
@@ -28,7 +28,7 @@ Using github pages
 USE_SSH=true npm run deploy
 ```
 
-## Repo:
+## Repo
 
 **[github](https://github.com/phoenixpulsar/phoenixpulsar.github.io)**.
 
