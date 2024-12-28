@@ -70,7 +70,7 @@ The error occurs because the Cargo.lock file is missing or outdated. The --locke
 
 For the tutorial, I used the `non-reproducible-wasm` build option.
 
-# Deployment Logs
+## Deployment Logs
 
 ```bash
 near deploy ppulsarbasicauction0.testnet ./target/near/auction_contract.wasm
