@@ -4,10 +4,33 @@
         <title>Phoenix Pulsar's Tech Journal Blog</title>
         <link>https://phoenixpulsar.github.io/blog</link>
         <description>Phoenix Pulsar's Tech Journal Blog</description>
-        <lastBuildDate>Thu, 26 Aug 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 26 Dec 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Do things live in the blockchain forever?]]></title>
+            <link>https://phoenixpulsar.github.io/blog/block-forever</link>
+            <guid>https://phoenixpulsar.github.io/blog/block-forever</guid>
+            <pubDate>Sun, 26 Dec 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[On most blockchains, including NEAR, transactions and blocks are indeed immutable. Once a transaction is finalized and added to the blockchain, it cannot be altered or deleted. This immutability ensures transparency and trust within the blockchain system.]]></description>
+            <content:encoded><![CDATA[<p>On most blockchains, including NEAR, transactions and blocks are indeed immutable. Once a transaction is finalized and added to the blockchain, it cannot be altered or deleted. This immutability ensures transparency and trust within the blockchain system.</p>
+<p>However, not all data is stored in the blockchain itself. Smart contract state—the data stored by a smart contract—is managed differently. While the blockchain keeps a record of transactions that update this state, the actual state itself exists as part of the account's storage in NEAR.</p>
+<p>Deleting Contract State in NEAR</p>
+<p>In NEAR, it is possible to delete a contract's state. When this happens:</p>
+<p>The state associated with the contract is removed from the account storage.</p>
+<p>Any funds locked in the contract's storage are refunded to the account owner or a designated recipient.</p>
+<p>The transaction that performed the deletion remains on the blockchain as an immutable record.</p>
+<p>This process is intentional and designed for flexibility. For example, developers may choose to delete a contract after it is no longer needed or to redeploy a new version of the contract. The ability to clean up unused contracts helps manage storage costs, which are incurred for storing data on NEAR.</p>
+<p>Does This Mean the Blockchain Isn’t Permanent?</p>
+<p>No, the blockchain’s core immutability remains intact. The history of all transactions, including the one that deletes the contract state, is permanently recorded. What’s being "deleted" is the state data stored for that specific account, not the record of its existence or the transactions associated with it.</p>
+<p>This distinction is crucial: immutability applies to the blockchain's ledger, not necessarily to all the data managed by smart contracts.</p>
+<p>Key Takeaways</p>
+<p>Transactions and blocks are immutable and permanently recorded on the blockchain.</p>
+<p>Smart contract state can be deleted, but the transaction that triggered the deletion is permanently logged.</p>
+<p>Deleting contract state is a practical feature for managing costs and maintaining the system’s efficiency.</p>
+<p>Understanding these nuances helped me appreciate the flexibility of NEAR's design while recognizing the underlying permanence of blockchain records. It’s a balance between immutability for trust and adaptability for real-world use cases.</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Welcome]]></title>
             <link>https://phoenixpulsar.github.io/blog/welcome</link>
