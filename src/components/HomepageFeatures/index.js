@@ -19,6 +19,13 @@ const FeatureList = [
       "An encryption app built as a learning playground to explore cryptography concepts like hashing and encryption. While Firebase was used for hosting, this project also served as a sandbox to experiment with Firebase Functions, Firebase Authentication, and the Stripe API. Built without modern frameworks, it relies solely on modern JavaScript and a few NPM libraries (GSAP, Firebase, and SASS). I explored GSAP's timeline features for animation orchestration and added PWA functionality, making this app a standalone, installable PWA.",
   },
   {
+    title: "NEAR Login Starter Template",
+    href: "https://github.com/phoenixpulsar/near-wallet-login-starter",
+    src: "img/near-login-starter.gif",
+    description:
+      "Created a streamlined NEAR login template by simplifying the code from the NEAR tutorial and retaining only the core login logic. This template is an ideal starting point for building a login system for dApps and serves as the foundation for various sample projects",
+  },
+  {
     title: "NGINX Server",
     href: "https://phoenixpulsar.ink/",
     src: "img/my-server.gif",
