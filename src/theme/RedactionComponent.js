@@ -19,19 +19,27 @@ export default function RedactionWrapper({ children }) {
     const stored = localStorage.getItem('resume-unredacted') === 'true';
     setIsUnredacted(stored);
     
-    if (!stored) {
-      const redactableElements = document.querySelectorAll('[data-redact]');
-      redactableElements.forEach(element => {
-        const originalText = element.textContent;
-        element.textContent = '[REDACTED]';
-        element.style.color = '#666';
-        element.style.fontStyle = 'italic';
-        element.style.backgroundColor = '#f0f0f0';
-        element.style.padding = '2px 4px';
-        element.style.borderRadius = '3px';
-        element.setAttribute('data-original-text', originalText);
-      });
-    }
+    const applyRedaction = () => {
+      if (!stored) {
+        const redactableElements = document.querySelectorAll('[data-redact]');
+        redactableElements.forEach(element => {
+          if (element.getAttribute('data-original-text')) return;
+          const originalText = element.textContent;
+          element.textContent = '[REDACTED]';
+          element.style.color = '#666';
+          element.style.fontStyle = 'italic';
+          element.style.backgroundColor = '#f0f0f0';
+          element.style.padding = '2px 4px';
+          element.style.borderRadius = '3px';
+          element.setAttribute('data-original-text', originalText);
+        });
+      }
+    };
+
+    applyRedaction();
+    const timeoutId = setTimeout(applyRedaction, 100);
+    
+    return () => clearTimeout(timeoutId);
   }, [isBrowser]);
 
   const toggleRedaction = () => {
