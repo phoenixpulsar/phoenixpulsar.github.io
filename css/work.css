@@ -1,0 +1,203 @@
+/* ============================================================
+   Phoenix Pulsar — Selected Work / interactive directions
+   Domino Shuffle · Floating Constellation · Compressed Stack
+   Shares tokens from styles.css. Motion via GSAP + Flip.
+   ============================================================ */
+
+.work-stage {
+  position: relative;
+  margin-top: 8px;
+}
+
+/* playful filter pills (extends .filters/.chip) */
+.filters.playful .chip { transition: border-color .25s, color .25s, background .25s, transform .35s var(--ease); }
+.filters.playful .chip:active { transform: scale(.94); }
+.filters.playful .chip .ccount {
+  font-size: 9.5px; color: var(--muted); margin-left: 2px;
+}
+.filters.playful .chip[aria-pressed="true"] .ccount { color: color-mix(in srgb, var(--bg) 70%, var(--accent)); }
+
+.mode-hint {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--muted); display: inline-flex; align-items: center; gap: 8px; margin-bottom: 22px;
+}
+.mode-hint .mh-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent);
+  animation: cue 2.4s var(--ease) infinite; }
+@media (prefers-reduced-motion: reduce){ .mode-hint .mh-dot { animation: none; } }
+
+/* shared tile reset */
+.tile {
+  position: relative; cursor: pointer; -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+.tile-inner { position: relative; height: 100%; width: 100%; }
+
+/* dimmed (non-matching) — tuned per mode below */
+.tile.dimmed { pointer-events: auto; }
+
+/* ============================================================
+   1 · DOMINO SHUFFLE
+   slim standing tiles; hover expands width into a rich preview
+   ============================================================ */
+.work-domino {
+  display: flex; align-items: stretch; gap: 14px; flex-wrap: wrap;
+  min-height: 312px;
+}
+.tile.domino {
+  width: 78px; height: 300px; flex: 0 0 auto;
+  background: var(--surface); border: 1px solid var(--hairline); border-radius: 16px;
+  overflow: hidden;
+  transition: width .55s var(--ease), box-shadow .5s var(--ease), border-color .35s var(--ease),
+              opacity .5s var(--ease), filter .5s var(--ease), transform .5s var(--ease);
+}
+.tile.domino:hover {
+  width: 360px; box-shadow: var(--shadow-lift); border-color: var(--hairline-strong);
+}
+.tile.domino.dimmed { width: 64px; opacity: .42; filter: grayscale(.85); }
+.tile.domino.dimmed:hover { width: 300px; opacity: 1; filter: none; }
+
+/* status spine */
+.dom-spine { position: absolute; left: 0; top: 0; bottom: 0; width: 4px; }
+/* collapsed vertical label */
+.dom-collapsed {
+  position: absolute; inset: 0; padding: 18px 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: space-between;
+  transition: opacity .35s var(--ease);
+}
+.tile.domino:hover .dom-collapsed { opacity: 0; }
+.dom-idx { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.dom-vname {
+  writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg);
+  font-weight: 600; font-size: 16px; letter-spacing: -0.01em; white-space: nowrap;
+}
+.dom-vdot { width: 8px; height: 8px; border-radius: 50%; }
+
+/* expanded preview */
+.dom-full {
+  position: absolute; inset: 0; padding: 20px 22px 18px 26px;
+  display: flex; flex-direction: column; opacity: 0;
+  transition: opacity .4s var(--ease) .08s; pointer-events: none;
+}
+.tile.domino:hover .dom-full { opacity: 1; pointer-events: auto; }
+.dom-full .df-glyph {
+  font-family: var(--mono); font-size: 38px; color: var(--accent); font-weight: 500;
+  letter-spacing: -0.04em; line-height: 1; margin-bottom: auto; white-space: nowrap;
+}
+.dom-full .df-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.dom-full .df-name { font-size: 19px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 8px; }
+.dom-full .df-sum { font-size: 13.5px; line-height: 1.5; color: var(--ink-2); width: 270px; }
+.dom-full .df-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; }
+.dom-full .df-yr { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.dom-full .df-open {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--accent); display: inline-flex; gap: 7px;
+}
+
+/* ============================================================
+   2 · FLOATING CONSTELLATION
+   status-colored squares drifting; hover blooms a mini card
+   ============================================================ */
+.work-constellation {
+  display: flex; flex-wrap: wrap; gap: 30px 26px;
+  padding: 26px 6px 60px; min-height: 340px;
+}
+.tile.constellation { width: 92px; height: 92px; }
+.tile.constellation .tile-inner { transition: none; }
+.con-face {
+  position: absolute; inset: 0; border-radius: 18px;
+  background: var(--surface); border: 1px solid var(--hairline);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+  box-shadow: var(--shadow);
+  transition: transform .5s var(--ease), box-shadow .5s var(--ease),
+              border-color .35s var(--ease), opacity .5s var(--ease), filter .5s var(--ease);
+  overflow: hidden;
+}
+.con-face::after { /* status wash */
+  content: ""; position: absolute; inset: 0; opacity: .10;
+  background: radial-gradient(120% 120% at 50% 0%, var(--st), transparent 70%);
+}
+.con-glyph { font-family: var(--mono); font-size: 28px; color: var(--accent); font-weight: 500; line-height: 1; white-space: nowrap; }
+.con-dot { width: 8px; height: 8px; border-radius: 50%; }
+.tile.constellation:hover .con-face { transform: scale(1.12); box-shadow: var(--shadow-lift); border-color: var(--hairline-strong); z-index: 3; }
+.tile.constellation.dimmed .con-face { opacity: .3; filter: grayscale(.9); transform: scale(.84); }
+.tile.constellation.dimmed:hover .con-face { opacity: 1; filter: none; transform: scale(1.05); }
+
+/* bloom mini card */
+.con-mini {
+  position: absolute; top: calc(100% + 12px); left: 50%; width: 248px;
+  translate: -50% 0; transform-origin: top center;
+  background: var(--surface); border: 1px solid var(--hairline-strong); border-radius: 14px;
+  box-shadow: var(--shadow-lift); padding: 16px 16px 15px; z-index: 20;
+  opacity: 0; transform: translateY(-6px) scale(.96); pointer-events: none;
+  transition: opacity .3s var(--ease), transform .35s var(--ease);
+}
+.tile.constellation:hover .con-mini { opacity: 1; transform: translateY(0) scale(1); }
+.con-mini::before { /* pointer */
+  content: ""; position: absolute; top: -6px; left: 50%; margin-left: -6px; width: 11px; height: 11px;
+  background: var(--surface); border-left: 1px solid var(--hairline-strong); border-top: 1px solid var(--hairline-strong);
+  transform: rotate(45deg);
+}
+.con-mini .cm-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 9px; }
+.con-mini .cm-name { font-size: 16px; font-weight: 600; letter-spacing: -0.02em; }
+.con-mini .cm-sum { font-size: 13px; line-height: 1.5; color: var(--ink-2); }
+.con-mini .cm-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; }
+.con-mini .cm-yr { font-family: var(--mono); font-size: 10.5px; color: var(--muted); }
+.con-mini .cm-open { font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); display: inline-flex; gap: 6px; }
+
+/* ============================================================
+   3 · COMPRESSED CARD STACK
+   overlapped cards, slivers visible; hover pulls one forward
+   ============================================================ */
+.work-stack {
+  display: flex; align-items: flex-end; padding: 44px 0 24px; min-height: 320px;
+  padding-left: 4px;
+}
+.tile.stack {
+  width: 300px; height: 248px; flex: 0 0 auto;
+  background: var(--surface); border: 1px solid var(--hairline); border-radius: 18px;
+  box-shadow: var(--shadow);
+  transition: transform .5s var(--ease), box-shadow .5s var(--ease),
+              border-color .35s var(--ease), opacity .5s var(--ease), filter .5s var(--ease);
+}
+.tile.stack:not(:first-child) { margin-left: -232px; }
+.tile.stack:hover { transform: translateY(-22px); z-index: 12; box-shadow: var(--shadow-lift); border-color: var(--hairline-strong); }
+.tile.stack.dimmed { opacity: .5; filter: grayscale(.7); transform: translateY(10px) scale(.96); }
+.tile.stack.dimmed:hover { opacity: 1; filter: none; transform: translateY(-16px) scale(1); z-index: 12; }
+
+/* featured: first (front-most matching) card rests fully open on the left */
+.tile.stack:first-child { z-index: 8; }
+.tile.stack:first-child .stk-sliver { opacity: 0; pointer-events: none; }
+.tile.stack:first-child .stk-body { opacity: 1; pointer-events: auto; }
+
+/* sliver: status spine + vertical name, always visible */
+.stk-sliver {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 68px;
+  display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+  padding: 18px 0; border-right: 1px solid var(--hairline);
+  transition: opacity .35s var(--ease);
+}
+.tile.stack:hover .stk-sliver { opacity: 0; }
+.stk-spinedot { width: 9px; height: 9px; border-radius: 50%; }
+.stk-vname { writing-mode: vertical-rl; transform: rotate(180deg); font-weight: 600; font-size: 15px; letter-spacing: -0.01em; white-space: nowrap; }
+.stk-idx { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+
+/* full body, revealed on lift */
+.stk-body {
+  position: absolute; inset: 0; padding: 22px 24px 20px; display: flex; flex-direction: column;
+  opacity: 0; transition: opacity .4s var(--ease) .06s; pointer-events: none;
+}
+.tile.stack:hover .stk-body { opacity: 1; pointer-events: auto; }
+.stk-body .sb-top { display: flex; align-items: flex-start; justify-content: space-between; }
+.stk-body .sb-glyph { font-family: var(--mono); font-size: 34px; color: var(--accent); font-weight: 500; line-height: 1; margin-bottom: auto; white-space: nowrap; }
+.stk-body .sb-name { font-size: 20px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 8px; }
+.stk-body .sb-sum { font-size: 13.5px; line-height: 1.5; color: var(--ink-2); }
+.stk-body .sb-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; }
+.stk-body .sb-yr { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.stk-body .sb-open { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); display: inline-flex; gap: 7px; }
+
+/* hint line for stack on small screens — allow horizontal scroll */
+@media (max-width: 720px){
+  .work-stack { overflow-x: auto; overflow-y: visible; padding-bottom: 30px; -webkit-overflow-scrolling: touch; }
+  .work-domino { gap: 10px; }
+  .tile.domino:hover { width: 280px; }
+}
