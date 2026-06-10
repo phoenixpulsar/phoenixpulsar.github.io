@@ -6,7 +6,7 @@ const PP_ACCENTS = ["#e8541e", "#f0b400", "#2a6fdb", "#3a7d5a"];
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "heroVariant": "statement",
   "workMode": "domino",
-  "dark": false,
+  "dark": true,
   "accent": "#e8541e",
   "taglineIndex": 0,
   "showFilters": true
@@ -155,6 +155,10 @@ function App() {
       <hr className="hairline" />
 
       <WorkSection projects={projects} onOpen={openProject} mode={t.workMode} showFilters={t.showFilters} />
+
+      <hr className="hairline" />
+
+      <AboutSection />
 
       <footer className="foot">
         <div className="foot-in">
