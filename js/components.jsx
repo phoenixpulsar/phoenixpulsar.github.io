@@ -146,7 +146,7 @@ function HeroStatement({ tagline, onWork, projectCount }) {
           </div>
         </div>
         <div className="hero-portrait reveal">
-          <img src="img/avatar.jpg" alt="Phoenix Pulsar" />
+          <img src="avatar.jpeg" alt="Phoenix Pulsar" />
         </div>
       </div>
     </section>
