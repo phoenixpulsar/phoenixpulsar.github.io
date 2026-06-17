@@ -80,8 +80,8 @@ function App() {
     const g = window.gsap;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (g && !reduce && detailRef.current) {
-      g.to(detailRef.current, { opacity: 0, duration: 0.32, ease: "power2.in" });
-      g.to(scrimRef.current, { opacity: 0, duration: 0.32, ease: "power2.in", onComplete: finish });
+      g.set(scrimRef.current, { opacity: 0 });
+      g.to(detailRef.current, { opacity: 0, duration: 0.32, ease: "power2.in", onComplete: finish });
     } else { finish(); }
     function finish() {
       setOpen(false);
