@@ -183,6 +183,9 @@ a { color: inherit; text-decoration: none; }
   box-shadow: var(--shadow-lift);
   position: relative;
 }
+.hero-portrait {
+  background: var(--surface-2);
+}
 .hero-portrait img {
   width: 100%;
   height: 100%;

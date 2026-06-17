@@ -30,7 +30,7 @@ window.PP_PROJECTS = [
     summary: "Chat with any PDF — right inside Telegram.",
     blurb:
       "Send a PDF straight into Telegram and the bot reads, indexes and lets you interrogate it in plain language. No commands, no syntax. Credits are bought in-chat with TON, so there's near-zero friction between question and answer.",
-    tech: ["Telegram Bot API", "RAG / embeddings", "Vector search", "TON payments", "Node.js"],
+    tech: ["Telegram Bot API", "RAG / embeddings", "Vector search", "TON payments", "PostgreSQL", "Ruby / Sinatra", "OpenAI API", "Railway", "TypeScript"],
     highlights: [
       "Upload any PDF — indexed and queryable in seconds.",
       "Natural-language Q&A, no commands to memorise.",
@@ -40,21 +40,19 @@ window.PP_PROJECTS = [
       { label: "Ingestion + indexing pipeline", state: "done" },
       { label: "Plain-language Q&A", state: "done" },
       { label: "TON in-chat payments", state: "done" },
-      { label: "Multi-document workspaces", state: "active" },
-      { label: "Team libraries + sharing", state: "planned" },
     ],
   },
   {
     id: "ordo",
     name: "Ordo One",
-    status: "beta",
+    status: "live",
     glyph: "0x",
     year: "2024",
     url: "https://ordo-one-app.web.app/",
     summary: "Client-side encryption — secure your data with ease.",
     blurb:
       "A zero-trust encryption playground. Files you upload are converted into secure byte arrays with the Web Crypto API and can only be decrypted with your password — nothing readable ever leaves your device. Built with no framework: modern JS, GSAP, Firebase and an installable PWA shell.",
-    tech: ["Web Crypto API", "GSAP", "Firebase", "PWA", "SASS"],
+    tech: ["Web Crypto API", "GSAP", "Firebase", "PWA", "SCSS"],
     highlights: [
       "Browser-native Web Crypto — keys never leave your device.",
       "Password-locked byte arrays, fully client-side.",
@@ -63,14 +61,12 @@ window.PP_PROJECTS = [
     roadmap: [
       { label: "Web Crypto encrypt / decrypt", state: "done" },
       { label: "PWA + offline shell", state: "done" },
-      { label: "Shareable encrypted links", state: "active" },
-      { label: "Key rotation + recovery", state: "planned" },
     ],
   },
   {
     id: "near-starter",
     name: "NEAR Login Starter",
-    status: "shipped",
+    status: "live",
     glyph: "Ⓝ",
     year: "2023",
     url: "https://github.com/phoenixpulsar/near-wallet-login-starter",
@@ -92,14 +88,14 @@ window.PP_PROJECTS = [
   {
     id: "transformtext",
     name: "TransformText",
-    status: "funding",
+    status: "beta",
     glyph: "↹",
     year: "2025",
     url: null,
     summary: "An inline Telegram bot that reshapes text anywhere you type.",
     blurb:
       "Summon it inline in any Telegram chat to transform text on the fly — case, formatting, encoding, cleanup and more — without leaving the conversation. The plumbing works; funding turns a sharp utility into a polished product with a transform marketplace.",
-    tech: ["Telegram inline bot", "Node.js", "Serverless"],
+    tech: ["Telegram inline bot", "Ruby"],
     highlights: [
       "Inline — works in any chat, no app switching.",
       "A growing library of text transforms.",
@@ -107,9 +103,9 @@ window.PP_PROJECTS = [
     ],
     roadmap: [
       { label: "Inline bot core + transforms", state: "done" },
-      { label: "Polished UX + onboarding", state: "funded" },
-      { label: "Transform marketplace", state: "funded" },
-      { label: "Pro tier + team accounts", state: "funded" },
+      { label: "Investigate response performance", state: "active" },
+      { label: "More transform options for users", state: "planned" },
+      { label: "Link login and payment for credits", state: "planned" },
     ],
   },
   {
@@ -129,10 +125,11 @@ window.PP_PROJECTS = [
       "Trust, reviews and scheduling built in.",
     ],
     roadmap: [
-      { label: "Lane listings + search", state: "active" },
-      { label: "Booking + payments flow", state: "active" },
-      { label: "Reviews + trust system", state: "planned" },
-      { label: "Pilot city launch", state: "planned" },
+      { label: "UX / UIX flow", state: "active" },
+      { label: "Get prototype live on web", state: "active" },
+      { label: "Integrate auth", state: "planned" },
+      { label: "Add database", state: "planned" },
+      { label: "User feedback", state: "planned" },
     ],
   },
   {
@@ -152,23 +149,24 @@ window.PP_PROJECTS = [
       "Fast, legible, keyboard-first.",
     ],
     roadmap: [
-      { label: "Timeline core + tasks", state: "active" },
-      { label: "Milestones + roadmaps", state: "active" },
-      { label: "Sharing + embeds", state: "planned" },
-      { label: "Team workspaces", state: "planned" },
+      { label: "UX / UIX flow", state: "active" },
+      { label: "Get prototype live on web", state: "active" },
+      { label: "Integrate auth", state: "planned" },
+      { label: "Add database", state: "planned" },
+      { label: "User feedback", state: "planned" },
     ],
   },
   {
     id: "finaltapwins",
     name: "FinalTapWins",
-    status: "funding",
+    status: "dev",
     glyph: "⊙",
     year: "2025",
     url: null,
     summary: "A last-tap-wins game, native to Telegram.",
     blurb:
-      "A Telegram mini-app game built on a deceptively simple loop: the last person to tap before the timer resets wins the pot. Viral by construction. The core loop is proven — funding unlocks the economy, tournaments and the growth engine.",
-    tech: ["Telegram Mini App", "Real-time", "Game economy"],
+      "A last-tap-wins game native to Telegram. The core game loop and basic UI/UX are done — currently working through the business logic for payment flows. Looking for collaboration to add smart contracts to manage payment flows. Pending soft beta release, production release, and marketing.",
+    tech: ["Telegram Mini App", "Real-time", "Smart contracts", "Game economy"],
     highlights: [
       "One-tap loop, instantly understandable.",
       "Native to Telegram — zero install.",
@@ -176,54 +174,13 @@ window.PP_PROJECTS = [
     ],
     roadmap: [
       { label: "Core game loop", state: "done" },
-      { label: "In-app economy + rewards", state: "funded" },
-      { label: "Tournaments + leaderboards", state: "funded" },
-      { label: "Growth + referral engine", state: "funded" },
+      { label: "Basic UI/UX", state: "done" },
+      { label: "Business logic for payment flows", state: "active" },
+      { label: "Smart contract integration for payments", state: "planned" },
+      { label: "Soft beta release", state: "planned" },
+      { label: "Production release", state: "planned" },
+      { label: "Marketing", state: "planned" },
     ],
   },
-  {
-    id: "missedcall",
-    name: "Missed Called Money",
-    status: "concept",
-    glyph: "☎",
-    year: "2026",
-    url: null,
-    summary: "Turn missed calls into booked revenue.",
-    blurb:
-      "An AI assistant for small businesses that catches the calls they can't answer — texting back, qualifying, and booking the appointment automatically. Every missed call is leaked revenue; this closes the gap while the owner is busy doing the actual work.",
-    tech: ["AI assistant", "Voice + SMS", "Scheduling"],
-    highlights: [
-      "Auto-responds to missed calls instantly.",
-      "Qualifies and books straight into the calendar.",
-      "Recovers revenue that quietly walks away.",
-    ],
-    roadmap: [
-      { label: "Concept + customer discovery", state: "active" },
-      { label: "Missed-call → SMS prototype", state: "planned" },
-      { label: "Calendar booking integration", state: "planned" },
-    ],
-  },
-  {
-    id: "tellmeday",
-    name: "Tell Me About Your Day",
-    status: "funding",
-    glyph: "◠",
-    year: "2026",
-    url: null,
-    summary: "An AI companion for the commute home.",
-    blurb:
-      "A voice assistant you talk to on the way back from work — it listens, reflects, and helps you decompress and close out the day. The conversational prototype is the heart of it; funding builds the memory, the voice and the daily ritual around it.",
-    tech: ["Conversational AI", "Voice", "Mobile"],
-    highlights: [
-      "Natural voice conversation, hands-free.",
-      "Reflects with you to close out the day.",
-      "Remembers context across your week.",
-    ],
-    roadmap: [
-      { label: "Conversational prototype", state: "done" },
-      { label: "Persistent memory", state: "funded" },
-      { label: "Natural voice + personas", state: "funded" },
-      { label: "Daily ritual + mobile app", state: "funded" },
-    ],
-  },
+
 ];
