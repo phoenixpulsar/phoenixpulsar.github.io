@@ -76,12 +76,17 @@ const config = {
       // Replace with your project's social card
       image: "img/logo.jpeg",
       navbar: {
-        title: "Home",
         logo: {
           alt: "Home",
           src: "img/logo.jpeg",
+          href: "https://phoenixpulsar.github.io/",
         },
         items: [
+          {
+            href: "https://phoenixpulsar.github.io/",
+            label: "Home",
+            position: "left",
+          },
           {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
