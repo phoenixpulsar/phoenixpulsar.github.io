@@ -188,3 +188,16 @@
   border-top: 1px solid var(--hairline);
   margin: 32px 0 10px;
 }
+
+/* narrow-screen tuning for longer about copy */
+@media (max-width: 600px) {
+  .about { padding-inline: var(--gutter); }
+  .about-head { flex-direction: column; gap: 12px; }
+  .about-depth { flex-wrap: wrap; }
+  .depth-seg { padding: 7px 12px; font-size: 10.5px; }
+  .ab-lead { font-size: clamp(17px, 4.5vw, 20px); }
+  .ab-p { font-size: 15.5px; line-height: 1.65; }
+  .ab-mantra { padding: 16px 0 16px 14px; }
+  .ab-mantra .ml { font-size: 13px; }
+  .ab + .ab { margin-top: 18px; }
+}
