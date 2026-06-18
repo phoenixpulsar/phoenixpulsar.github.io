@@ -323,10 +323,12 @@ a { color: inherit; text-decoration: none; }
    ============================================================ */
 .detail-scrim {
   position: fixed; inset: 0; z-index: 60; background: color-mix(in srgb, var(--bg) 70%, transparent);
-  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
   opacity: 0; pointer-events: none; transition: opacity .4s var(--ease);
 }
-.detail-scrim.open { opacity: 1; pointer-events: auto; }
+.detail-scrim.open {
+  opacity: 1; pointer-events: auto;
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
 
 .detail {
   position: fixed; inset: 0; z-index: 61; overflow-y: auto; overscroll-behavior: contain;
