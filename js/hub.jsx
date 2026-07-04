@@ -252,7 +252,20 @@ function Hub({ tw }) {
   }
   function openAbout() { document.body.style.overflow = "hidden"; send("OPEN_ABOUT"); }
   function openContact() { document.body.style.overflow = "hidden"; send("OPEN_CONTACT"); }
-  function closeOverlay() { document.body.style.overflow = ""; send("CLOSE"); }
+  function closeOverlay() {
+    document.body.style.overflow = "";
+    send("CLOSE");
+    const g = window.gsap, reduce = prefersReduced(), scrim = scrimRef.current;
+    if (scrim) {
+      if (!g || reduce) { scrim.style.opacity = 0; }
+      else { g.to(scrim, { opacity: 0, duration: 0.3, ease: "power2.out", onComplete: () => g.set(scrim, { clearProps: "opacity" }) }); }
+    }
+    [detailRef.current, aboutRef.current, contactRef.current].forEach((el) => {
+      if (!el) return;
+      if (g) g.set(el, { clearProps: "opacity,transform" });
+      else { el.style.opacity = ""; el.style.transform = ""; }
+    });
+  }
 
   function onNodeActivate(n, el) {
     if (n.type === "project") return openProject(n.project, el);
