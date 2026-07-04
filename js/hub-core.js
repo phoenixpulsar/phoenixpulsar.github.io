@@ -82,17 +82,17 @@ window.hubLayout = function (w, h, spread) {
 
   // radial
   const cx = w / 2;
-  const cy = h * 0.485;
-  const avatarH = Math.min(h * 0.54, 360);
+  const cy = h * 0.47;
+  const avatarH = Math.min(h * 0.72, 520);
   const avatarW = avatarH * (855 / 919);
   const ox = cx;
   const oy = cy - avatarH * 0.15; // goggle line
-  const rx = w * 0.44 * spread;
-  const ry = h * 0.40 * spread;
+  const rx = w * 0.48 * spread;
+  const ry = h * 0.44 * spread;
   const mx = 176, my = 86, myBot = 168; // keep labels off the edges + HUD
   /* exclusion ellipse so no node ever sits on the portrait */
   const ecx = cx, ecy = cy - avatarH * 0.06;
-  const erx = avatarW * 0.62, ery = avatarH * 0.60;
+  const erx = avatarW * 0.68, ery = avatarH * 0.62;
   const laid = nodes.map((n) => {
     const rad = (n.a * Math.PI) / 180;
     let x = cx + rx * n.rf * Math.cos(rad);
