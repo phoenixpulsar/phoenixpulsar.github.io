@@ -62,15 +62,13 @@ body { overflow-x: hidden; }
   pointer-events: none;
 }
 .hub-avatar .av-inner {
-  /* bottom fade lives on the wrapper: nested masks multiply, so the
-     oval always completes its falloff before the image's bottom edge */
-  -webkit-mask-image: linear-gradient(to bottom, #000 58%, rgba(0,0,0,.4) 78%, transparent 92%);
-          mask-image: linear-gradient(to bottom, #000 58%, rgba(0,0,0,.4) 78%, transparent 92%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 72%, rgba(0,0,0,.45) 88%, transparent 98%);
+          mask-image: linear-gradient(to bottom, #000 72%, rgba(0,0,0,.45) 88%, transparent 98%);
 }
 .hub-avatar .av-img {
   display: block; width: 100%; height: auto;
-  -webkit-mask-image: radial-gradient(58% 62% at 50% 42%, #000 50%, rgba(0,0,0,.5) 66%, transparent 80%);
-          mask-image: radial-gradient(58% 62% at 50% 42%, #000 50%, rgba(0,0,0,.5) 66%, transparent 80%);
+  -webkit-mask-image: radial-gradient(72% 78% at 50% 44%, #000 60%, rgba(0,0,0,.5) 76%, transparent 92%);
+          mask-image: radial-gradient(72% 78% at 50% 44%, #000 60%, rgba(0,0,0,.5) 76%, transparent 92%);
   filter: saturate(.92) contrast(1.02);
 }
 /* teal glow bleeding from the goggles */
@@ -139,7 +137,10 @@ body { overflow-x: hidden; }
 .node-card {
   position: absolute; top: 50%; transform: translateY(-50%);
   display: flex; flex-direction: column; gap: 3px; max-width: 170px;
-  transition: transform .4s var(--ease);
+  padding: 8px 12px; border-radius: 8px;
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  transition: transform .4s var(--ease), background .3s var(--ease), box-shadow .3s var(--ease);
 }
 .hub-node.side-right .node-card { left: 22px; text-align: left; align-items: flex-start; transform-origin: left center; }
 .hub-node.side-left  .node-card { right: 22px; text-align: right; align-items: flex-end; transform-origin: right center; }
@@ -167,6 +168,11 @@ body { overflow-x: hidden; }
 /* hover / focus bloom — BIG */
 .hub-node { transition: opacity .35s var(--ease), z-index 0s; }
 .hub-node:hover, .hub-node:focus-visible { outline: none; z-index: 10; }
+.hub-node:hover .node-card,
+.hub-node:focus-visible .node-card {
+  background: color-mix(in srgb, var(--surface) 96%, transparent);
+  box-shadow: 0 4px 24px color-mix(in srgb, var(--ink) 10%, transparent);
+}
 .hub-node:hover .node-dot,
 .hub-node:focus-visible .node-dot {
   transform: scale(2);
@@ -324,12 +330,12 @@ body { overflow-x: hidden; }
 /* narrow: spine mode tweaks */
 @media (max-width: 760px) {
   .hub-avatar .av-inner {
-    -webkit-mask-image: linear-gradient(to bottom, #000 55%, rgba(0,0,0,.4) 75%, transparent 90%);
-            mask-image: linear-gradient(to bottom, #000 55%, rgba(0,0,0,.4) 75%, transparent 90%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 68%, rgba(0,0,0,.45) 85%, transparent 96%);
+            mask-image: linear-gradient(to bottom, #000 68%, rgba(0,0,0,.45) 85%, transparent 96%);
   }
   .hub-avatar .av-img {
-    -webkit-mask-image: radial-gradient(60% 60% at 50% 40%, #000 50%, rgba(0,0,0,.5) 66%, transparent 80%);
-            mask-image: radial-gradient(60% 60% at 50% 40%, #000 50%, rgba(0,0,0,.5) 66%, transparent 80%);
+    -webkit-mask-image: radial-gradient(72% 74% at 50% 42%, #000 58%, rgba(0,0,0,.5) 72%, transparent 88%);
+            mask-image: radial-gradient(72% 74% at 50% 42%, #000 58%, rgba(0,0,0,.5) 72%, transparent 88%);
   }
   .node-summary { display: none; }
   .node-card { max-width: 46vw; }
