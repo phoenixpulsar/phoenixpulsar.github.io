@@ -160,6 +160,10 @@ function App() {
 
       <AboutSection />
 
+      <hr className="hairline" />
+
+      <ContactSection />
+
       <footer className="foot">
         <div className="foot-in">
           <div>
@@ -173,6 +177,7 @@ function App() {
             <a className="nav-link" href="https://github.com/phoenixpulsar" target="_blank" rel="noreferrer">GITHUB ↗</a>
             <a className="nav-link" href="https://phoenixpulsar.github.io/docs/intro" target="_blank" rel="noreferrer">TECH NOTES ↗</a>
             <a className="nav-link" href="https://phoenixpulsar.github.io/blog" target="_blank" rel="noreferrer">BLOG ↗</a>
+            <a className="nav-link" style={{ cursor: "pointer" }} onClick={() => scrollTo("contact")}>CONTACT</a>
           </div>
         </div>
       </footer>
