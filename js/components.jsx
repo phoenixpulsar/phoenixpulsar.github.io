@@ -45,7 +45,6 @@ function TopBar({ dark, onToggleTheme, onNav }) {
         </div>
         <nav>
           <a className="nav-link hide-sm" onClick={() => onNav("work")}>WORK</a>
-          <a className="nav-link hide-sm" onClick={() => onNav("about")}>ABOUT</a>
           <a className="nav-link hide-sm" href="https://phoenixpulsar.github.io/docs/intro" target="_blank" rel="noreferrer">NOTES</a>
           <a className="nav-link hide-sm" href="https://github.com/phoenixpulsar" target="_blank" rel="noreferrer">GITHUB</a>
           <button className="theme-toggle" onClick={onToggleTheme} aria-label="Toggle theme">
@@ -122,32 +121,25 @@ function ProjectCard({ p, index, onOpen }) {
 function HeroStatement({ tagline, onWork, projectCount }) {
   return (
     <section className="hero wrap" style={{ paddingTop: "clamp(60px,12vh,150px)", paddingBottom: "clamp(50px,9vh,110px)" }}>
-      <div className="hero-statement-grid">
-        <div>
-          <div className="hero-eyebrow reveal">
-            <span className="line" />
-            <span className="kicker">Phoenix Pulsar · Independent software</span>
-          </div>
-          <h1 className="display reveal" style={{ fontSize: "clamp(40px, 8.2vw, 104px)", maxWidth: "16ch" }}>
-            {tagline}
-          </h1>
-          <p className="hero-sub reveal">
-            Indie engineer building Telegram bots, AI assistants and on-chain tools.
-            Small, sharp products — shipped, in beta, and a few looking for a backer.
-          </p>
-          <div className="hero-actions reveal">
-            <button className="btn btn-primary" onClick={onWork}>
-              View the work <span className="arrow" aria-hidden>↓</span>
-            </button>
-            <a className="btn btn-ghost" href="https://github.com/phoenixpulsar" target="_blank" rel="noreferrer">
-              GitHub <span className="arrow" aria-hidden>↗</span>
-            </a>
-            <span className="kicker" style={{ marginLeft: 6 }}>{String(projectCount).padStart(2,"0")} projects</span>
-          </div>
-        </div>
-        <div className="hero-portrait reveal">
-          <img src="img/avatar.jpg" alt="Phoenix Pulsar" />
-        </div>
+      <div className="hero-eyebrow reveal">
+        <span className="line" />
+        <span className="kicker">Phoenix Pulsar · Independent software</span>
+      </div>
+      <h1 className="display reveal" style={{ fontSize: "clamp(40px, 8.2vw, 104px)", maxWidth: "16ch" }}>
+        {tagline}
+      </h1>
+      <p className="hero-sub reveal">
+        Indie engineer building Telegram bots, AI assistants and on-chain tools.
+        Small, sharp products — shipped, in beta, and a few looking for a backer.
+      </p>
+      <div className="hero-actions reveal">
+        <button className="btn btn-primary" onClick={onWork}>
+          View the work <span className="arrow" aria-hidden>↓</span>
+        </button>
+        <a className="btn btn-ghost" href="https://github.com/phoenixpulsar" target="_blank" rel="noreferrer">
+          GitHub <span className="arrow" aria-hidden>↗</span>
+        </a>
+        <span className="kicker" style={{ marginLeft: 6 }}>{String(projectCount).padStart(2,"0")} projects</span>
       </div>
     </section>
   );

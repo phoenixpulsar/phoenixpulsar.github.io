@@ -6,7 +6,7 @@ const PP_ACCENTS = ["#e8541e", "#f0b400", "#2a6fdb", "#3a7d5a"];
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "heroVariant": "statement",
   "workMode": "domino",
-  "dark": true,
+  "dark": false,
   "accent": "#e8541e",
   "taglineIndex": 0,
   "showFilters": true
@@ -80,8 +80,8 @@ function App() {
     const g = window.gsap;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (g && !reduce && detailRef.current) {
-      g.set(scrimRef.current, { opacity: 0 });
-      g.to(detailRef.current, { opacity: 0, duration: 0.32, ease: "power2.in", onComplete: finish });
+      g.to(detailRef.current, { opacity: 0, duration: 0.32, ease: "power2.in" });
+      g.to(scrimRef.current, { opacity: 0, duration: 0.32, ease: "power2.in", onComplete: finish });
     } else { finish(); }
     function finish() {
       setOpen(false);
