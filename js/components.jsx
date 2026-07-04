@@ -46,6 +46,7 @@ function TopBar({ dark, onToggleTheme, onNav }) {
         <nav>
           <a className="nav-link hide-sm" onClick={() => onNav("work")}>WORK</a>
           <a className="nav-link hide-sm" onClick={() => onNav("about")}>ABOUT</a>
+          <a className="nav-link hide-sm" onClick={() => onNav("contact")}>CONTACT</a>
           <a className="nav-link hide-sm" href="https://phoenixpulsar.github.io/docs/intro" target="_blank" rel="noreferrer">NOTES</a>
           <a className="nav-link hide-sm" href="https://github.com/phoenixpulsar" target="_blank" rel="noreferrer">GITHUB</a>
           <button className="theme-toggle" onClick={onToggleTheme} aria-label="Toggle theme">
