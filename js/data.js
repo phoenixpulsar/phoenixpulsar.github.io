@@ -182,5 +182,49 @@ window.PP_PROJECTS = [
       { label: "Marketing", state: "planned" },
     ],
   },
-
+  {
+    id: "missedcall",
+    name: "Missed Called Money",
+    status: "concept",
+    glyph: "☎",
+    year: "2026",
+    url: null,
+    summary: "Turn missed calls into booked revenue.",
+    blurb:
+      "An AI assistant for small businesses that catches the calls they can't answer — texting back, qualifying, and booking the appointment automatically. Every missed call is leaked revenue; this closes the gap while the owner is busy doing the actual work.",
+    tech: ["AI assistant", "Voice + SMS", "Scheduling"],
+    highlights: [
+      "Auto-responds to missed calls instantly.",
+      "Qualifies and books straight into the calendar.",
+      "Recovers revenue that quietly walks away.",
+    ],
+    roadmap: [
+      { label: "Concept + customer discovery", state: "active" },
+      { label: "Missed-call → SMS prototype", state: "planned" },
+      { label: "Calendar booking integration", state: "planned" },
+    ],
+  },
+  {
+    id: "tellmeday",
+    name: "Tell Me About Your Day",
+    status: "funding",
+    glyph: "◠",
+    year: "2026",
+    url: null,
+    summary: "An AI companion for the commute home.",
+    blurb:
+      "A voice assistant you talk to on the way back from work — it listens, reflects, and helps you decompress and close out the day. The conversational prototype is the heart of it; funding builds the memory, the voice and the daily ritual around it.",
+    tech: ["Conversational AI", "Voice", "Mobile"],
+    highlights: [
+      "Natural voice conversation, hands-free.",
+      "Reflects with you to close out the day.",
+      "Remembers context across your week.",
+    ],
+    roadmap: [
+      { label: "Conversational prototype", state: "done" },
+      { label: "Persistent memory", state: "funded" },
+      { label: "Natural voice + personas", state: "funded" },
+      { label: "Daily ritual + mobile app", state: "funded" },
+    ],
+  },
 ];
