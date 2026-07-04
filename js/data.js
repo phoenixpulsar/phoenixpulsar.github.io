@@ -138,7 +138,7 @@ window.PP_PROJECTS = [
     status: "dev",
     glyph: "├─",
     year: "2026",
-    url: null,
+    url: "https://timeline4projects.com/",
     summary: "The easiest project tracker ever.",
     blurb:
       "Project tracking stripped to its essence — a timeline you can actually keep up to date. No ceremony, no fifty fields per task. Just a fast, legible view of what's happening and what's next. (It's quietly powering the roadmaps on this very site.)",
