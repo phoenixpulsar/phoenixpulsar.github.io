@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>The Five Truths — Cheat Sheet</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #F2F1EE; }
+  * { box-sizing: border-box; }
+  @media print {
+    body { background: #fff; }
+    [data-c] { grid-template-rows: 1fr !important; }
+    [data-c] > div { opacity: 1 !important; }
+    [data-plus], [data-noprint] { display: none !important; }
+    [data-card] { break-inside: avoid; }
+  }
+</style>
+</helmet>
+
+<div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #1A1918; max-width: 920px; margin: 0 auto; padding: 56px 32px 80px 32px; line-height: 1.45;">
+
+  <!-- ============ TABS ============ -->
+  <nav data-noprint style="display: flex; gap: 6px; margin-bottom: 40px;">
+    <a href="/docs/notes/spirit-in-the-sky" style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: 0.1em; padding: 10px 16px; background: #1A1918; color: #F2F1EE; text-decoration: none;">01 — THE FIVE TRUTHS</a>
+    <a href="/docs/notes/emotional-debt" style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: 0.1em; padding: 10px 16px; background: transparent; color: #6E6B66; text-decoration: none; border: 1px solid #DAD7D2;" style-hover="color: #1A1918; border-color: #1A1918;">02 — EMOTIONAL DEBT</a>
+  </nav>
+
+  <!-- ============ HEADER ============ -->
+  <header style="display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 24px; padding-bottom: 28px; border-bottom: 2px solid #1A1918;">
+    <div>
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: 0.14em; color: #E8500A; margin-bottom: 14px;">SPIRIT IN THE SKY — FIELD GUIDE</div>
+      <h1 style="font-size: 44px; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 10px 0; line-height: 1.05;">The Five Truths</h1>
+      <p style="margin: 0; font-size: 16px; color: #6E6B66; max-width: 520px;">The same message, repeated across 190+ sacred texts written oceans and centuries apart. Click any card to open it.</p>
+      <a href="https://www.youtube.com/watch?v=ADYdypHZb2A" target="_blank" style="display: inline-block; margin-top: 16px; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: 0.08em; color: #6E6B66; text-decoration: none; border: 1px solid #DAD7D2; padding: 7px 12px;" style-hover="color: #E8500A; border-color: #E8500A;">▶ NOTES FROM VIDEO — youtube.com/watch?v=ADYdypHZb2A</a>
+    </div>
+    <button data-noprint onClick="{{ toggleAll }}" style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: 0.1em; padding: 10px 16px; background: #1A1918; color: #F2F1EE; border: none; cursor: pointer;" style-hover="background: #E8500A;">{{ allLabel }}</button>
+  </header>
+
+  <!-- ============ OVERVIEW STRIP ============ -->
+  <div style="display: grid; grid-template-columns: repeat(5, 1fr); border-bottom: 1px solid #DAD7D2;">
+    <div style="padding: 18px 12px 18px 0; border-right: 1px solid #DAD7D2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; color: #E8500A;">01</div>
+      <div style="font-size: 13px; font-weight: 600; margin-top: 6px;">You are not separate</div>
+    </div>
+    <div style="padding: 18px 12px; border-right: 1px solid #DAD7D2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; color: #E8500A;">02</div>
+      <div style="font-size: 13px; font-weight: 600; margin-top: 6px;">Fear is the lie, love is the truth</div>
+    </div>
+    <div style="padding: 18px 12px; border-right: 1px solid #DAD7D2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; color: #E8500A;">03</div>
+      <div style="font-size: 13px; font-weight: 600; margin-top: 6px;">Your mind is a projector</div>
+    </div>
+    <div style="padding: 18px 12px; border-right: 1px solid #DAD7D2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; color: #E8500A;">04</div>
+      <div style="font-size: 13px; font-weight: 600; margin-top: 6px;">The ego is the only enemy</div>
+    </div>
+    <div style="padding: 18px 0 18px 12px;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; color: #E8500A;">05</div>
+      <div style="font-size: 13px; font-weight: 600; margin-top: 6px;">Everything is connected</div>
+    </div>
+  </div>
+
+  <!-- ============ PART I ============ -->
+  <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: 0.14em; color: #6E6B66; margin: 48px 0 16px 0;">PART I — THE FIVE TRUTHS</div>
+
+  <!-- TRUTH 01 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 12px;">
+    <div onClick="{{ tog_t1 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 22px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 20px; color: #E8500A;">01</div>
+      <div>
+        <div style="font-size: 20px; font-weight: 700; letter-spacing: -0.01em;">You are not separate</div>
+        <div style="font-size: 14px; color: #6E6B66; margin-top: 3px;">You never were, and you never could be. Separation is the hallucination.</div>
+      </div>
+      <div data-plus style="font-size: 26px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_t1 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_t1 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_t1 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 26px 24px; border-top: 1px solid #EAE8E3;">
+          <p style="display: {{ proseDisplay }}; font-size: 15px; color: #3A3835; max-width: 640px; margin: 20px 0 0 0;">There is no you versus the world — only one universe experiencing itself from your point of view. The moment you believe you're separate, you start fearing loss, death, rejection, scarcity — and chasing validation and control. Remember what you are, and the fear dissolves.</p>
+          <div style="display: {{ proseDisplay }}; margin-top: 20px; padding: 18px 20px; background: #F2F1EE; border-left: 2px solid #E8500A;">
+            <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.14em; color: #E8500A; margin-bottom: 8px;">METAPHOR — THE WAVE</div>
+            <p style="margin: 0; font-size: 14px; color: #3A3835;">A wave rises from the ocean and looks separate — its own shape, motion, lifespan. But the wave is not a thing; it's the ocean briefly expressing itself as a form. Birth is the ocean rising. Death is the wave returning. You never stopped being the ocean — you just forgot for a minute.</p>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; margin-top: 24px;">
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">UPANISHADS</div>
+              <div style="font-size: 14px; margin-top: 4px;">“Tat Tvam Asi” — you are that. Not connected to it; the divine wearing a human costume.</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">JESUS</div>
+              <div style="font-size: 14px; margin-top: 4px;">“The kingdom of God is within you.” Not in a building or a book — in you.</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">SUFISM — RUMI</div>
+              <div style="font-size: 14px; margin-top: 4px;">“You are not a drop in the ocean. You are the entire ocean in a drop.”</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">HERMETICA</div>
+              <div style="font-size: 14px; margin-top: 4px;">“All is One.”</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">TAOISM</div>
+              <div style="font-size: 14px; margin-top: 4px;">Everything is the Tao expressing itself in 10,000 forms.</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">POPOL VUH (MAYAN)</div>
+              <div style="font-size: 14px; margin-top: 4px;">“Heart of Sky, Heart of Earth” — the universe as a single living being.</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">BUDDHISM</div>
+              <div style="font-size: 14px; margin-top: 4px;">There is no separate self.</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">KABBALAH</div>
+              <div style="font-size: 14px; margin-top: 4px;">“Creation is one emanation, divided only in appearance.”</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">QUANTUM PHYSICS</div>
+              <div style="font-size: 14px; margin-top: 4px;">Everything is one field, fragmented by perception.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRUTH 02 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 12px;">
+    <div onClick="{{ tog_t2 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 22px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 20px; color: #E8500A;">02</div>
+      <div>
+        <div style="font-size: 20px; font-weight: 700; letter-spacing: -0.01em;">Fear is the lie, love is the truth</div>
+        <div style="font-size: 14px; color: #6E6B66; margin-top: 3px;">Fear is the greatest lie ever told. Love is the only thing that's real.</div>
+      </div>
+      <div data-plus style="font-size: 26px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_t2 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_t2 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_t2 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 26px 24px; border-top: 1px solid #EAE8E3;">
+          <p style="display: {{ proseDisplay }}; font-size: 15px; color: #3A3835; max-width: 640px; margin: 20px 0 0 0;">Fear shrinks the self; love expands it. Fear breeds ego; love dissolves it. Fear makes you chase approval, money, control — living like something is missing. Love, in the ancient sense, isn't romantic: it's oneness, alignment, the recognition that we're made of the same source. You don't find love — you return to it. It's your default state.</p>
+          <div style="display: {{ proseDisplay }}; margin-top: 20px; padding: 18px 20px; background: #F2F1EE; border-left: 2px solid #E8500A;">
+            <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.14em; color: #E8500A; margin-bottom: 8px;">KEY INSIGHT</div>
+            <p style="margin: 0; font-size: 14px; color: #3A3835;">Every mistake, blown-up relationship, regret, and self-sabotage traces back to fear. Every spiritual teacher was saying the same thing: you're suffering because you're believing a lie. Fear feels bad because it's incompatible with what you actually are.</p>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; margin-top: 24px;">
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">THE BIBLE</div>
+              <div style="font-size: 14px; margin-top: 4px;">“Fear not” / “Do not be afraid” — the most repeated phrase in the entire book.</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">JESUS</div>
+              <div style="font-size: 14px; margin-top: 4px;">“Perfect love casts out fear.”</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">THE BUDDHA</div>
+              <div style="font-size: 14px; margin-top: 4px;">“Hatred does not cease by hatred; by love alone is hatred healed.”</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">BHAGAVAD GITA</div>
+              <div style="font-size: 14px; margin-top: 4px;">The path of devotion (love) leads to liberation; the path of ignorance (fear) leads to suffering.</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">TAO TE CHING</div>
+              <div style="font-size: 14px; margin-top: 4px;">Courage comes from love; paralysis comes from fear.</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">DHAMMAPADA</div>
+              <div style="font-size: 14px; margin-top: 4px;">“The mind is everything” — fear starts in the mind, not the world.</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">SUFISM — RUMI</div>
+              <div style="font-size: 14px; margin-top: 4px;">“Your job is not to seek for love, but to find and remove the barriers you built against it.”</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRUTH 03 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 12px;">
+    <div onClick="{{ tog_t3 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 22px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 20px; color: #E8500A;">03</div>
+      <div>
+        <div style="font-size: 20px; font-weight: 700; letter-spacing: -0.01em;">Your mind is a projector, not a camera</div>
+        <div style="font-size: 14px; color: #6E6B66; margin-top: 3px;">Your brain doesn't record reality. It generates it.</div>
+      </div>
+      <div data-plus style="font-size: 26px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_t3 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_t3 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_t3 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 26px 24px; border-top: 1px solid #EAE8E3;">
+          <p style="display: {{ proseDisplay }}; font-size: 15px; color: #3A3835; max-width: 640px; margin: 20px 0 0 0;">Your fears, beliefs, identity, memories, and stories aren't interpretations — they're filters that reshape reality before it reaches you. This is why two people can live the same moment and experience two different things, why suffering usually comes from inside, and why every path teaches stillness, presence, and meditation: stop letting fear hijack the projector, and you see clearly for the first time.</p>
+          <div style="display: {{ proseDisplay }}; margin-top: 20px; padding: 18px 20px; background: #F2F1EE; border-left: 2px solid #E8500A;">
+            <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.14em; color: #E8500A; margin-bottom: 8px;">KEY INSIGHT</div>
+            <p style="margin: 0; font-size: 14px; color: #3A3835;">If your mind shapes reality, every limitation you hold is one you unconsciously built — and every breakthrough you're chasing is one thought pattern away. Consciousness is not inside the universe; the universe is inside consciousness.</p>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; margin-top: 24px;">
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">DHAMMAPADA</div>
+              <div style="font-size: 14px; margin-top: 4px;">“What you think, you become.”</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">HERMETICA</div>
+              <div style="font-size: 14px; margin-top: 4px;">“The All is Mind.”</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">HINDU VEDANTA</div>
+              <div style="font-size: 14px; margin-top: 4px;">Maya — the world you perceive is shaped by the mind's illusions.</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">UPANISHADS</div>
+              <div style="font-size: 14px; margin-top: 4px;">The universe arises from consciousness.</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">PLATO</div>
+              <div style="font-size: 14px; margin-top: 4px;">“Reality is the moving image of eternity” — the mind shapes what you perceive.</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">QUANTUM PHYSICS</div>
+              <div style="font-size: 14px; margin-top: 4px;">Observation changes the behavior of matter.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRUTH 04 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 12px;">
+    <div onClick="{{ tog_t4 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 22px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 20px; color: #E8500A;">04</div>
+      <div>
+        <div style="font-size: 20px; font-weight: 700; letter-spacing: -0.01em;">The ego is the only enemy</div>
+        <div style="font-size: 14px; color: #6E6B66; margin-top: 3px;">Not the world, not other people, not bad luck. The thing you call “you” is the thing hurting you.</div>
+      </div>
+      <div data-plus style="font-size: 26px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_t4 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_t4 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_t4 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 26px 24px; border-top: 1px solid #EAE8E3;">
+          <div style="display: {{ proseDisplay }}; margin-top: 20px; padding: 18px 20px; background: #F2F1EE; border-left: 2px solid #E8500A;">
+            <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.14em; color: #E8500A; margin-bottom: 8px;">DEFINITION</div>
+            <p style="margin: 0; font-size: 16px; font-weight: 600; color: #1A1918;">The ego is the story you built to survive your fears.</p>
+            <p style="margin: 8px 0 0 0; font-size: 14px; color: #3A3835;">A mask, a guard rail, a protective suit stitched from trauma, insecurity, and conditioning — and that suit becomes your prison. Since fear isn't real, the ego is a hallucination: a survival instinct that doesn't know who you actually are.</p>
+          </div>
+          <p style="display: {{ proseDisplay }}; font-size: 15px; color: #3A3835; max-width: 640px; margin: 20px 0 0 0;">The ego needs three things to exist: <strong>hierarchy, conflict, and recognition</strong>. It feeds on better-than / worse-than, needs to win, be right, be special. It's the voice saying: they're judging you, you're not enough, you're falling behind, you need to prove yourself. You are the ocean; the ego is a ripple that thinks it's the entire Pacific. Drop it even for a second and you feel it — you never needed it. The armor was the wound.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; margin-top: 24px;">
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">BHAGAVAD GITA</div>
+              <div style="font-size: 14px; margin-top: 4px;">“The self must conquer the lower self.”</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">PLATO</div>
+              <div style="font-size: 14px; margin-top: 4px;">“All sins come from excess self-love.”</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">JESUS</div>
+              <div style="font-size: 14px; margin-top: 4px;">“Unless a man dies to himself, he cannot live.”</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">THE BUDDHA</div>
+              <div style="font-size: 14px; margin-top: 4px;">Suffering begins with attachment to the self.</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">TAO TE CHING</div>
+              <div style="font-size: 14px; margin-top: 4px;">“He who defines himself cannot know who he truly is.”</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRUTH 05 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 12px;">
+    <div onClick="{{ tog_t5 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 22px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 20px; color: #E8500A;">05</div>
+      <div>
+        <div style="font-size: 20px; font-weight: 700; letter-spacing: -0.01em;">Everything is connected</div>
+        <div style="font-size: 14px; color: #6E6B66; margin-top: 3px;">One system. Every action ripples, every emotion radiates, every intention vibrates through the whole.</div>
+      </div>
+      <div data-plus style="font-size: 26px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_t5 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_t5 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_t5 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 26px 24px; border-top: 1px solid #EAE8E3;">
+          <p style="display: {{ proseDisplay }}; font-size: 15px; color: #3A3835; max-width: 640px; margin: 20px 0 0 0;">You are not a separate node in the universe — you're a neuron in a cosmic brain, firing inside infinity. Your life is not happening <em>to</em> you; it's happening <em>with</em> you, <em>through</em> you, and <em>as</em> you.</p>
+          <div style="display: {{ proseDisplay }}; margin-top: 20px; padding: 18px 20px; background: #F2F1EE; border-left: 2px solid #E8500A;">
+            <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.14em; color: #E8500A; margin-bottom: 8px;">THE LOCK SNAPS OPEN</div>
+            <p style="margin: 0; font-size: 14px; color: #3A3835;">Not separate + fear is illusion + mind shapes reality + ego is the enemy + everything connected = you aren't a human trying to become spiritual. You are the universe temporarily being human.</p>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; margin-top: 24px;">
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">HERMETICA</div>
+              <div style="font-size: 14px; margin-top: 4px;">“As above, so below.”</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">KABBALAH</div>
+              <div style="font-size: 14px; margin-top: 4px;">All creation emerges from a single Tree of Life.</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">QUANTUM PHYSICS</div>
+              <div style="font-size: 14px; margin-top: 4px;">No particle is truly separate — every particle has entanglement.</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">TAOISM</div>
+              <div style="font-size: 14px; margin-top: 4px;">Opposites are not enemies — complementary forces of the same source.</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">POPOL VUH (MAYAN)</div>
+              <div style="font-size: 14px; margin-top: 4px;">The universe is one living organism.</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">BUDDHISM</div>
+              <div style="font-size: 14px; margin-top: 4px;">Interbeing — nothing exists independently.</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">SUFI MYSTICISM</div>
+              <div style="font-size: 14px; margin-top: 4px;">The soul is a thread in the same cosmic fabric.</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">EGYPTIAN PYRAMID TEXTS</div>
+              <div style="font-size: 14px; margin-top: 4px;">“The soul returns to the stars from which it came.”</div>
+            </div>
+            <div style="border-top: 1px solid #DAD7D2; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">LAKOTA / NATIVE AMERICAN</div>
+              <div style="font-size: 14px; margin-top: 4px;">“Mitakuye Oyasin” — we are all related; with all beings I am related.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PART II ============ -->
+  <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: 0.14em; color: #6E6B66; margin: 48px 0 16px 0;">PART II — HOW WE LOST IT</div>
+
+  <div data-card style="background: #1A1918; color: #F2F1EE; margin-bottom: 12px;">
+    <div onClick="{{ tog_lost }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 22px 24px; cursor: pointer;" style-hover="background: #262523;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 20px; color: #E8500A;">—</div>
+      <div>
+        <div style="font-size: 20px; font-weight: 700; letter-spacing: -0.01em;">We forgot who we were</div>
+        <div style="font-size: 14px; color: #A8A5A0; margin-top: 3px;">Not a conspiracy. Something simpler, darker, and more human.</div>
+      </div>
+      <div data-plus style="font-size: 26px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_lost }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_lost }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_lost }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 26px 24px; border-top: 1px solid #33312E;">
+          <div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: center; gap: 12px; margin-top: 24px; text-align: center;">
+            <div style="border: 1px solid #4A4844; padding: 14px 10px; font-size: 14px;">Fear became a <strong>tool</strong><div style="font-size: 12px; color: #A8A5A0; margin-top: 2px;">survival, borders, winters</div></div>
+            <div style="color: #E8500A; font-size: 18px;">→</div>
+            <div style="border: 1px solid #4A4844; padding: 14px 10px; font-size: 14px;">Fear became a <strong>habit</strong><div style="font-size: 12px; color: #A8A5A0; margin-top: 2px;">tens of thousands of years</div></div>
+            <div style="color: #E8500A; font-size: 18px;">→</div>
+            <div style="border: 1px solid #4A4844; padding: 14px 10px; font-size: 14px;">Fear became a <strong>culture</strong><div style="font-size: 12px; color: #A8A5A0; margin-top: 2px;">and everything fear touches, it corrupts</div></div>
+          </div>
+          <p style="display: {{ proseDisplay }}; font-size: 15px; color: #C9C6C1; max-width: 680px; margin: 22px 0 0 0;">We built civilizations on the lie that we're separate, economies on the lie that we're lacking, identities on the lie that we're not enough. We stopped asking <em>“Who am I?”</em> and started asking <em>“Who do they think I am?”</em> — and the distractions got scary, sexy, addictively good. The symptoms: anxiety normalized, loneliness epidemic, attention collapsing. The most technologically advanced species in history — and the most spiritually disconnected. The noise got louder than the signal.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; margin-top: 24px;">
+            <div style="border-top: 1px solid #4A4844; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #A8A5A0;">TAO TE CHING</div>
+              <div style="font-size: 14px; margin-top: 4px;">“When wealth and honors lead to arrogance, it brings evil.”</div>
+            </div>
+            <div style="border-top: 1px solid #4A4844; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #A8A5A0;">THE QURAN</div>
+              <div style="font-size: 14px; margin-top: 4px;">“Do not commit abuse on the earth, spreading corruption.”</div>
+            </div>
+            <div style="border-top: 1px solid #4A4844; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #A8A5A0;">THE BIBLE</div>
+              <div style="font-size: 14px; margin-top: 4px;">“Do not store up treasures on earth.”</div>
+            </div>
+            <div style="border-top: 1px solid #4A4844; padding: 12px 0;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #A8A5A0;">THE BUDDHA</div>
+              <div style="font-size: 14px; margin-top: 4px;">“Clinging is the root of suffering.”</div>
+            </div>
+          </div>
+          <p style="margin: 22px 0 0 0; font-size: 15px; color: #F2F1EE; border-left: 2px solid #E8500A; padding-left: 16px;">The ancient warning wasn't a metaphor — it was a prophecy: <strong>if you forget yourself, you will forget everything that matters.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PART III ============ -->
+  <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: 0.14em; color: #6E6B66; margin: 48px 0 16px 0;">PART III — THE ROAD MAP FOR WAKING UP</div>
+
+  <!-- STEP 1 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 8px;">
+    <div onClick="{{ tog_s1 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 16px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 14px; color: #E8500A;">S.1</div>
+      <div style="font-size: 16px; font-weight: 600;">It begins with truth <span style="font-weight: 400; color: #6E6B66;">— truth is the solvent that dissolves the illusion</span></div>
+      <div data-plus style="font-size: 22px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_s1 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_s1 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_s1 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 20px 104px; border-top: 1px solid #EAE8E3;">
+          <p style="display: {{ proseDisplay }}; font-size: 14px; color: #3A3835; margin: 14px 0 0 0;">Not obedience, not faith — truth about yourself, the mind, fear, and ego. Suffering comes before awakening because pain breaks the illusion we hide behind.</p>
+          <div style="font-size: 14px; margin-top: 14px; display: grid; gap: 8px;">
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">JOHN 8:32 · </span>“The truth will set you free.”</div>
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">AVESTA (ZOROASTRIAN) · </span>“Truth is the best good. It is the everlasting light.”</div>
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">THE BUDDHA · </span>“Three things cannot remain hidden: the sun, the moon, and the truth.”</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 8px;">
+    <div onClick="{{ tog_s2 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 16px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 14px; color: #E8500A;">S.2</div>
+      <div style="font-size: 16px; font-weight: 600;">It requires presence <span style="font-weight: 400; color: #6E6B66;">— not someday, not when you're ready. Now.</span></div>
+      <div data-plus style="font-size: 22px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_s2 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_s2 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_s2 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 20px 104px; border-top: 1px solid #EAE8E3;">
+          <p style="display: {{ proseDisplay }}; font-size: 14px; color: #3A3835; margin: 14px 0 0 0;">Presence is not a spiritual idea — it's a doorway back into reality. The ancients weren't saying “be mindful”; they were saying: stop living in a fake world.</p>
+          <div style="font-size: 14px; margin-top: 14px; display: grid; gap: 8px;">
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">THE BUDDHA · </span>“Don't dwell in the past, don't dream of the future — concentrate the mind on the present moment.”</div>
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">TAO TE CHING · </span>“Depressed — living in the past. Anxious — living in the future. At peace — living in the present.”</div>
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">MATTHEW 6:34 · </span>“Do not worry about tomorrow.”</div>
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">PLATO · </span>“Time is the moving image of eternity — it's just right now.”</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 8px;">
+    <div onClick="{{ tog_s3 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 16px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 14px; color: #E8500A;">S.3</div>
+      <div style="font-size: 16px; font-weight: 600;">It requires compassion &amp; service <span style="font-weight: 400; color: #6E6B66;">— if I see you as myself, compassion is just me taking care of me</span></div>
+      <div data-plus style="font-size: 22px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_s3 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_s3 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_s3 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 20px 104px; border-top: 1px solid #EAE8E3;">
+          <p style="display: {{ proseDisplay }}; font-size: 14px; color: #3A3835; margin: 14px 0 0 0;">Not morality — recognition. Once you stop believing you're separate, compassion becomes the only behavior that makes sense.</p>
+          <div style="font-size: 14px; margin-top: 14px; display: grid; gap: 8px;">
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">THE QURAN · </span>“Give to the needy, the orphan, the captive.”</div>
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">THE BIBLE · </span>“Love your neighbor as yourself.”</div>
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">CONFUCIUS, ANALECTS 12:2 · </span>“A gentleman seeks virtue.”</div>
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">PLATO · </span>“Be kind, for everyone you meet is fighting a hard battle.”</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 4 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 8px;">
+    <div onClick="{{ tog_s4 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 16px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 14px; color: #E8500A;">S.4</div>
+      <div style="font-size: 16px; font-weight: 600;">It requires stillness &amp; self-knowledge <span style="font-weight: 400; color: #6E6B66;">— awakening is removing noise, not adding ideas</span></div>
+      <div data-plus style="font-size: 22px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_s4 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_s4 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_s4 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 20px 104px; border-top: 1px solid #EAE8E3;">
+          <p style="display: {{ proseDisplay }}; font-size: 14px; color: #3A3835; margin: 14px 0 0 0;">Strip away illusions, stories, ego, and fear until what's left is the thing that was always there: you, without distortion.</p>
+          <div style="font-size: 14px; margin-top: 14px; display: grid; gap: 8px;">
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">UPANISHADS · </span>“Know thyself and you shall know the universe.”</div>
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">SOCRATES · </span>“The unexamined life is not worth living.”</div>
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">YOGA SUTRAS · </span>“Yoga is the stilling of the mind.”</div>
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">NAG HAMMADI (GNOSTIC) · </span>“Know yourself and you will be free.”</div>
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">THE BUDDHA · </span>“In stillness, truth reveals itself.”</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 5 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 8px;">
+    <div onClick="{{ tog_s5 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 16px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 14px; color: #E8500A;">S.5</div>
+      <div style="font-size: 16px; font-weight: 600;">It transforms suffering into wisdom <span style="font-weight: 400; color: #6E6B66;">— not a life without suffering; a life where suffering becomes a catalyst</span></div>
+      <div data-plus style="font-size: 22px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_s5 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_s5 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_s5 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 20px 104px; border-top: 1px solid #EAE8E3;">
+          <div style="font-size: 14px; margin-top: 14px; display: grid; gap: 8px;">
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">ROMANS 5:3 · </span>“Suffering produces perseverance; perseverance, character; and character, hope.”</div>
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">BUDDHISM · </span>The Four Noble Truths — suffering is the path to enlightenment.</div>
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">BHAGAVAD GITA · </span>“In compassion, I destroy the darkness of ignorance with the lamp of knowledge.”</div>
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">EGYPTIAN PYRAMID TEXTS · </span>“The soul ascends through trials.”</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 6 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 8px;">
+    <div onClick="{{ tog_s6 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 16px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 14px; color: #E8500A;">S.6</div>
+      <div style="font-size: 16px; font-weight: 600;">Waking up is remembering what you are <span style="font-weight: 400; color: #6E6B66;">— not becoming something new; a return home</span></div>
+      <div data-plus style="font-size: 22px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_s6 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_s6 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_s6 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 20px 104px; border-top: 1px solid #EAE8E3;">
+          <p style="display: {{ proseDisplay }}; font-size: 14px; color: #3A3835; margin: 14px 0 0 0;">A flash of recognition: “I'm not separate. I never was. I just forgot for a minute.” It feels like stress, then relief — like setting down a huge backpack you didn't know you were carrying. The world doesn't change when you wake up; your relationship to it does. Fear loses its authority. Ego loses its grip. The noise stops convincing you it matters.</p>
+          <div style="font-size: 14px; margin-top: 14px; display: grid; gap: 8px;">
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">KABBALAH · </span>“Each soul is a spark of the infinite.”</div>
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">EMERALD TABLET · </span>“All is one.”</div>
+            <div><span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">POPOL VUH · </span>Humans are the divine remembering itself.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="margin-top: 56px; padding-top: 24px; border-top: 2px solid #1A1918; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: baseline;">
+    <p style="margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; max-width: 480px;">The truth was never hidden.<br />It was just waiting.</p>
+    <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: 0.12em; color: #6E6B66; text-align: right;">190+ TEXTS · 5 TRUTHS · 1 MESSAGE</div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;startExpanded&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Behavior&quot;}, &quot;quotesOnly&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Content&quot;}}">
+class Component extends DCLogic {
+  state = { open: {} };
+
+  keys() {
+    return ['t1','t2','t3','t4','t5','lost','s1','s2','s3','s4','s5','s6'];
+  }
+
+  isOpen(k) {
+    const v = this.state.open[k];
+    if (v === undefined) return !!this.props.startExpanded;
+    return v;
+  }
+
+  renderVals() {
+    const vals = {};
+    const keys = this.keys();
+    const anyClosed = keys.some((k) => !this.isOpen(k));
+
+    vals.allLabel = anyClosed ? 'EXPAND ALL' : 'COLLAPSE ALL';
+    vals.toggleAll = () => {
+      const open = {};
+      keys.forEach((k) => { open[k] = anyClosed; });
+      this.setState({ open });
+    };
+
+    keys.forEach((k) => {
+      const open = this.isOpen(k);
+      vals['rows_' + k] = open ? '1fr' : '0fr';
+      vals['op_' + k] = open ? 1 : 0;
+      vals['deg_' + k] = open ? 'rotate(45deg)' : 'rotate(0deg)';
+      vals['tog_' + k] = () => {
+        this.setState((s) => ({ open: Object.assign({}, s.open, { [k]: !this.isOpen(k) }) }));
+      };
+    });
+
+    vals.proseDisplay = this.props.quotesOnly ? 'none' : 'block';
+    return vals;
+  }
+}
+</script>
+</body>
+</html>
