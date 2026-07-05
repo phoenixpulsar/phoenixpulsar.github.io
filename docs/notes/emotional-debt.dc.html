@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Emotional Debt — Cheat Sheet</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #F2F1EE; }
+  * { box-sizing: border-box; }
+  @media print {
+    body { background: #fff; }
+    [data-c] { grid-template-rows: 1fr !important; }
+    [data-c] > div { opacity: 1 !important; }
+    [data-plus], [data-noprint] { display: none !important; }
+    [data-card] { break-inside: avoid; }
+  }
+</style>
+</helmet>
+
+<div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #1A1918; max-width: 920px; margin: 0 auto; padding: 56px 32px 80px 32px; line-height: 1.45;">
+
+  <!-- ============ TABS ============ -->
+  <nav data-noprint style="display: flex; gap: 6px; margin-bottom: 40px;">
+    <a href="/docs/notes/spirit-in-the-sky" style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: 0.1em; padding: 10px 16px; background: transparent; color: #6E6B66; text-decoration: none; border: 1px solid #DAD7D2;" style-hover="color: #1A1918; border-color: #1A1918;">01 — THE FIVE TRUTHS</a>
+    <a href="/docs/notes/emotional-debt" style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: 0.1em; padding: 10px 16px; background: #1A1918; color: #F2F1EE; text-decoration: none;">02 — EMOTIONAL DEBT</a>
+  </nav>
+
+  <!-- ============ HEADER ============ -->
+  <header style="display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 24px; padding-bottom: 28px; border-bottom: 2px solid #1A1918;">
+    <div>
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: 0.14em; color: #E8500A; margin-bottom: 14px;">LECTURE NOTES — FIELD GUIDE</div>
+      <h1 style="font-size: 44px; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 10px 0; line-height: 1.05;">Emotional Debt</h1>
+      <p style="margin: 0; font-size: 16px; color: #6E6B66; max-width: 560px;">Every unprocessed emotion becomes a line of credit your nervous system is silently paying interest on. Click any card to open it.</p>
+      <a href="https://www.youtube.com/watch?v=r9uYu8_cISw" target="_blank" style="display: inline-block; margin-top: 16px; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: 0.08em; color: #6E6B66; text-decoration: none; border: 1px solid #DAD7D2; padding: 7px 12px;" style-hover="color: #E8500A; border-color: #E8500A;">▶ NOTES FROM VIDEO — youtube.com/watch?v=r9uYu8_cISw</a>
+    </div>
+    <button data-noprint onClick="{{ toggleAll }}" style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: 0.1em; padding: 10px 16px; background: #1A1918; color: #F2F1EE; border: none; cursor: pointer;" style-hover="background: #E8500A;">{{ allLabel }}</button>
+  </header>
+
+  <!-- ============ OVERVIEW STRIP ============ -->
+  <div style="display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid #DAD7D2;">
+    <div style="padding: 18px 12px 18px 0; border-right: 1px solid #DAD7D2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; color: #E8500A;">I</div>
+      <div style="font-size: 13px; font-weight: 600; margin-top: 6px;">The mechanism — stored as state, not memory</div>
+    </div>
+    <div style="padding: 18px 12px; border-right: 1px solid #DAD7D2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; color: #E8500A;">II</div>
+      <div style="font-size: 13px; font-weight: 600; margin-top: 6px;">Compound interest — what the debt does to you</div>
+    </div>
+    <div style="padding: 18px 12px; border-right: 1px solid #DAD7D2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; color: #E8500A;">III</div>
+      <div style="font-size: 13px; font-weight: 600; margin-top: 6px;">Debt servicing — how you keep from defaulting</div>
+    </div>
+    <div style="padding: 18px 0 18px 12px;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; color: #E8500A;">IV</div>
+      <div style="font-size: 13px; font-weight: 600; margin-top: 6px;">Paying it down — 5 perspective shifts</div>
+    </div>
+  </div>
+
+  <!-- ============ PART I ============ -->
+  <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: 0.14em; color: #6E6B66; margin: 48px 0 16px 0;">PART I — THE MECHANISM</div>
+
+  <!-- M1 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 12px;">
+    <div onClick="{{ tog_m1 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 22px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 20px; color: #E8500A;">01</div>
+      <div>
+        <div style="font-size: 20px; font-weight: 700; letter-spacing: -0.01em;">Stored as a state, not a memory</div>
+        <div style="font-size: 14px; color: #6E6B66; margin-top: 3px;">Trauma isn't remembered. It's re-entered.</div>
+      </div>
+      <div data-plus style="font-size: 26px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_m1 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_m1 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_m1 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 26px 24px; border-top: 1px solid #EAE8E3;">
+          <p style="display: {{ proseDisplay }}; font-size: 15px; color: #3A3835; max-width: 640px; margin: 20px 0 0 0;">When something emotionally significant happens and your system doesn't get to complete the response, the charge doesn't fade. It lodges in subcortical structures — the amygdala, insula, brain stem, the body itself. Not as memory. As a <strong>state</strong>.</p>
+          <div style="display: {{ proseDisplay }}; margin-top: 20px; padding: 18px 20px; background: #F2F1EE; border-left: 2px solid #E8500A;">
+            <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.14em; color: #E8500A; margin-bottom: 8px;">EXAMPLE — THE BOARDROOM</div>
+            <p style="margin: 0; font-size: 14px; color: #3A3835;">You're 45, sitting in a meeting. Somebody raises their voice slightly — and you're not 45 anymore. You're seven, and you don't know why your hands are shaking. That's not "getting triggered." That's your nervous system replaying an incomplete response, because it never got to finish.</p>
+          </div>
+          <div style="border-top: 1px solid #DAD7D2; padding: 12px 0; margin-top: 24px; font-size: 14px;">
+            <span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.12em; color: #6E6B66;">SOURCES CITED · </span>Peter Levine (Somatic Experiencing) demonstrated this decades ago; Bessel van der Kolk's research confirmed it.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- M2 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 12px;">
+    <div onClick="{{ tog_m2 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 22px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 20px; color: #E8500A;">02</div>
+      <div>
+        <div style="font-size: 20px; font-weight: 700; letter-spacing: -0.01em;">The incomplete response</div>
+        <div style="font-size: 14px; color: #6E6B66; margin-top: 3px;">Completed responses dissipate. Interrupted ones get locked into the body.</div>
+      </div>
+      <div data-plus style="font-size: 26px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_m2 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_m2 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_m2 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 26px 24px; border-top: 1px solid #EAE8E3;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 22px;">
+            <div style="border: 1px solid #DAD7D2; padding: 16px 18px;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.14em; color: #6E6B66; margin-bottom: 8px;">RESPONSE COMPLETES</div>
+              <p style="margin: 0; font-size: 14px; color: #3A3835;">You fight and win. You run and escape. You cry and someone holds you. The charge dissipates — the system returns to baseline and files the event as <strong>resolved</strong>.</p>
+            </div>
+            <div style="border: 1px solid #E8500A; padding: 16px 18px;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.14em; color: #E8500A; margin-bottom: 8px;">RESPONSE INTERRUPTED</div>
+              <p style="margin: 0; font-size: 14px; color: #3A3835;">You can't fight — you're a child. You can't run — it's your home. You can't cry — crying gets punished. The mobilized energy has to go somewhere, so it <strong>locks into the body</strong>.</p>
+            </div>
+          </div>
+          <p style="display: {{ proseDisplay }}; font-size: 15px; color: #3A3835; max-width: 640px; margin: 20px 0 0 0;">Tight shoulders, chronic jaw pain, stomach problems fifty doctors can't explain, a baseline hum of anxiety so old you think it's how you are. <strong>We call it personality when it's just storage.</strong> "Impatient" isn't a temperament — it's a bill you haven't paid. Needing to stay busy isn't ambition — it's a payment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- M3 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 12px;">
+    <div onClick="{{ tog_m3 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 22px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 20px; color: #E8500A;">03</div>
+      <div>
+        <div style="font-size: 20px; font-weight: 700; letter-spacing: -0.01em;">You don't have a comfort zone</div>
+        <div style="font-size: 14px; color: #6E6B66; margin-top: 3px;">It's a perimeter built around what your nervous system couldn't finish processing.</div>
+      </div>
+      <div data-plus style="font-size: 26px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_m3 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_m3 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_m3 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 26px 24px; border-top: 1px solid #EAE8E3;">
+          <p style="display: {{ proseDisplay }}; font-size: 15px; color: #3A3835; max-width: 640px; margin: 20px 0 0 0;">The brain's number-one job is predicting what happens next. When an emotional event stays unresolved, the brain scans for similar conditions — not to heal, but to <strong>prevent</strong>. It builds avoidance architecture: don't get close to people like that, don't say things like that, don't feel things like that, don't be in rooms like that.</p>
+          <p style="display: {{ proseDisplay }}; font-size: 15px; color: #3A3835; max-width: 640px; margin: 14px 0 0 0;">Over time, those micro-avoidances become your entire life. "Stepping out of your comfort zone" misses the point — the zone <em>is</em> the debt.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PART II ============ -->
+  <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: 0.14em; color: #6E6B66; margin: 48px 0 16px 0;">PART II — COMPOUND INTEREST</div>
+
+  <div data-card style="background: #1A1918; color: #F2F1EE; margin-bottom: 12px;">
+    <div onClick="{{ tog_comp }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 22px 24px; cursor: pointer;" style-hover="background: #262523;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 20px; color: #E8500A;">—</div>
+      <div>
+        <div style="font-size: 20px; font-weight: 700; letter-spacing: -0.01em;">What accumulating debt does, neurologically</div>
+        <div style="font-size: 14px; color: #A8A5A0; margin-top: 3px;">Not a metaphor anymore — this is the math your body does. Four things happen.</div>
+      </div>
+      <div data-plus style="font-size: 26px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_comp }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_comp }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_comp }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 26px 24px; border-top: 1px solid #33312E;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 22px;">
+            <div style="border: 1px solid #4A4844; padding: 16px 18px;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.14em; color: #E8500A; margin-bottom: 8px;">1 — AMYGDALA HYPERSENSITIZED</div>
+              <p style="margin: 0; font-size: 14px; color: #C9C6C1;">Each event lowers the activation threshold for the next (especially within ~90 days). It takes less and less to set you off. You think you're getting weaker — you're accumulating interest.</p>
+            </div>
+            <div style="border: 1px solid #4A4844; padding: 16px 18px;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.14em; color: #E8500A; margin-bottom: 8px;">2 — PREFRONTAL CORTEX LOSES GROUND</div>
+              <p style="margin: 0; font-size: 14px; color: #C9C6C1;">Chronic emotional activation reduces executive function — planning, reasoning, impulse control, perspective. The amygdala runs more of the show: more reactive, less reflective, more impulsive, less patient.</p>
+            </div>
+            <div style="border: 1px solid #4A4844; padding: 16px 18px;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.14em; color: #E8500A; margin-bottom: 8px;">3 — HPA AXIS STAYS ON</div>
+              <p style="margin: 0; font-size: 14px; color: #C9C6C1;">Cortisol stays elevated — not crisis-level, a background hum. It suppresses immune function, degrades sleep architecture and memory consolidation, increases visceral fat, accelerates cellular aging. The body pays the bill.</p>
+            </div>
+            <div style="border: 1px solid #4A4844; padding: 16px 18px;">
+              <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.14em; color: #E8500A; margin-bottom: 8px;">4 — THE DEBT RECRUITS CO-SIGNERS</div>
+              <p style="margin: 0; font-size: 14px; color: #C9C6C1;">Unprocessed emotions pull other systems into the payment plan. Relationships become debt-servicing arrangements. Career becomes a distraction strategy. Habits are interest payments. The collateral is your identity.</p>
+            </div>
+          </div>
+          <p style="margin: 22px 0 0 0; font-size: 15px; color: #F2F1EE; border-left: 2px solid #E8500A; padding-left: 16px;">Everything organizes around the debt — and from the outside it just looks like "that's their personality." <strong>It's a nervous system building a life around staying one payment ahead.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PART III ============ -->
+  <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: 0.14em; color: #6E6B66; margin: 48px 0 16px 0;">PART III — DEBT SERVICING (NEVER REDUCES WHAT YOU OWE — JUST KEEPS YOU FROM DEFAULTING TODAY)</div>
+
+  <!-- D1 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 8px;">
+    <div onClick="{{ tog_d1 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 16px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 14px; color: #E8500A;">D.1</div>
+      <div style="font-size: 16px; font-weight: 600;">Numbing <span style="font-weight: 400; color: #6E6B66;">— the most common payment plan on earth</span></div>
+      <div data-plus style="font-size: 22px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_d1 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_d1 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_d1 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 20px 104px; border-top: 1px solid #EAE8E3;">
+          <p style="font-size: 14px; color: #3A3835; margin: 14px 0 0 0;">Alcohol, weed, scrolling, porn, food, shopping, binge-watching. Honestly? We don't do these because we deeply enjoy them — <strong>feeling nothing is cheaper than feeling everything we owe.</strong> And numbing works; that's why it's hard to stop. It's not a discipline problem — it's a successful short-term debt-management strategy. The debt is patient: it waits for the vacation you can't enjoy, the retirement you'll never sit still in, the weekend that fills you with dread instead of rest.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- D2 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 8px;">
+    <div onClick="{{ tog_d2 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 16px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 14px; color: #E8500A;">D.2</div>
+      <div style="font-size: 16px; font-weight: 600;">Performing <span style="font-weight: 400; color: #6E6B66;">— the funniest, most charming, most agreeable, most "fine" person in the room</span></div>
+      <div data-plus style="font-size: 22px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_d2 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_d2 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_d2 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 20px 104px; border-top: 1px solid #EAE8E3;">
+          <p style="font-size: 14px; color: #3A3835; margin: 14px 0 0 0;">Heavy performance is debt servicing — a way to profile yourself and others. Its cost is the most expensive loneliness there is: not the kind where nobody's around, but the kind where <strong>everyone is around you and no one knows you.</strong> Loneliness at 27% APR.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- D3 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 8px;">
+    <div onClick="{{ tog_d3 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 16px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 14px; color: #E8500A;">D.3</div>
+      <div style="font-size: 16px; font-weight: 600;">Self-medicating <span style="font-weight: 400; color: #6E6B66;">— it's about speed. Speed to normal.</span></div>
+      <div data-plus style="font-size: 22px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_d3 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_d3 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_d3 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 20px 104px; border-top: 1px solid #EAE8E3;">
+          <p style="font-size: 14px; color: #3A3835; margin: 14px 0 0 0;">The substance is the only payment method found that works fast enough to stay functional. Take it away without addressing the debt and you don't get recovery — you get a person drowning with nothing to hold on to. That's why so much addiction treatment fails: <strong>it confiscates the payment method without acknowledging the debt.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- D4 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 8px;">
+    <div onClick="{{ tog_d4 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 16px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 14px; color: #E8500A;">D.4</div>
+      <div style="font-size: 16px; font-weight: 600;">Over-giving mistaken for love <span style="font-weight: 400; color: #6E6B66;">— you attract what your nervous system recognizes</span></div>
+      <div data-plus style="font-size: 22px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_d4 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_d4 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_d4 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 20px 104px; border-top: 1px solid #EAE8E3;">
+          <p style="font-size: 14px; color: #3A3835; margin: 14px 0 0 0;">Overfunctioning, anticipating every need, sacrificing, making yourself necessary — that's not love, it's debt surfacing. You're not attracting what you want; you're attracting what your nervous system grew up with. If love came with anxiety, you'll feel most alive around people who make you anxious. If closeness came with control, you'll feel safe with people who dominate you. If affection came with conditions at age eight, the only love that feels real is the kind you have to earn — <strong>and you'll walk past the person who offers you peace.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRAUMA VS DEBT -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin: 16px 0 12px 0;">
+    <div onClick="{{ tog_vs }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 22px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 20px; color: #E8500A;">≠</div>
+      <div>
+        <div style="font-size: 20px; font-weight: 700; letter-spacing: -0.01em;">Trauma vs. emotional debt — and where yours came from</div>
+        <div style="font-size: 14px; color: #6E6B66; margin-top: 3px;">Trauma is an event. Emotional debt is an accumulation — a thousand small moments felt and not finished.</div>
+      </div>
+      <div data-plus style="font-size: 26px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_vs }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_vs }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_vs }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 26px 24px; border-top: 1px solid #EAE8E3;">
+          <p style="display: {{ proseDisplay }}; font-size: 15px; color: #3A3835; max-width: 640px; margin: 20px 0 0 0;">Trauma is nameable — clinicians can give it a DSM or ICD-10 code. Emotional debt has no code: you needed to be angry and learned it wasn't safe; you were six and forced to "be strong" instead of grieving; you needed to be a child and were made the adult. None of it is clinical trauma. All of it created debt.</p>
+          <div style="display: {{ proseDisplay }}; margin-top: 20px; padding: 18px 20px; background: #F2F1EE; border-left: 2px solid #E8500A;">
+            <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.14em; color: #E8500A; margin-bottom: 8px;">INHERITED BALANCE</div>
+            <p style="margin: 0; font-size: 14px; color: #3A3835;">Why did your parents do this? They were in debt too — big time. You can't give what you never got. They passed the balance forward without knowing it, and now it's in your account.</p>
+          </div>
+          <p style="display: {{ proseDisplay }}; font-size: 15px; color: #3A3835; max-width: 640px; margin: 20px 0 0 0;"><strong>Emotional bankruptcy:</strong> like financial systems, there's a threshold where payments can no longer cover the interest and the structure collapses. The results are predictable — a breakdown, a health crisis, an identity collapse. Sometimes all three at once.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PART IV ============ -->
+  <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: 0.14em; color: #6E6B66; margin: 48px 0 16px 0;">PART IV — PAYING IT DOWN</div>
+
+  <div style="background: #FBFAF8; border: 1px solid #DAD7D2; border-left: 2px solid #E8500A; padding: 20px 24px; margin-bottom: 16px;">
+    <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.14em; color: #E8500A; margin-bottom: 8px;">THE ACTIVE INGREDIENT — PERSPECTIVE</div>
+    <p style="margin: 0; font-size: 15px; color: #3A3835; max-width: 680px;">Everything that resolves emotional debt — therapy, somatic work, TRE, psychedelics, breath work, meditation — shares one active ingredient: a <strong>mechanical shift in vantage point</strong>. Not "look on the bright side" (that's comparison in a self-help costume). The moment therapy works is when you hear your story from outside yourself for the first time — looking <em>at</em> the story instead of from inside it. And your debt actively defends against exactly that: avoidance, numbing, busyness are defense mechanisms against perspective. Telling someone in massive emotional debt to "just feel your feelings" is like telling a friend who's $400K in debt to "just start saving."</p>
+  </div>
+
+  <!-- P1 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 8px;">
+    <div onClick="{{ tog_p1 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 16px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 14px; color: #E8500A;">S.1</div>
+      <div style="font-size: 16px; font-weight: 600;">See the payments <span style="font-weight: 400; color: #6E6B66;">— unconscious → conscious</span></div>
+      <div data-plus style="font-size: 22px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_p1 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_p1 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_p1 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 20px 104px; border-top: 1px solid #EAE8E3;">
+          <p style="display: {{ proseDisplay }}; font-size: 14px; color: #3A3835; margin: 14px 0 0 0;">Most people in emotional debt don't know it — they think they're just tired, stressed, getting older. Learn to see the pattern:</p>
+          <div style="font-size: 14px; margin-top: 14px; display: grid; gap: 8px;">
+            <div><span style="color: #E8500A; font-weight: 600;">→ </span>Reacting disproportionately — that's debt.</div>
+            <div><span style="color: #E8500A; font-weight: 600;">→ </span>Avoiding specific feelings with predictable behaviors — debt, every time.</div>
+            <div><span style="color: #E8500A; font-weight: 600;">→ </span>Rest feels dangerous — debt.</div>
+            <div><span style="color: #E8500A; font-weight: 600;">→ </span>Can't sit alone in silence without reaching for something — debt.</div>
+            <div><span style="color: #E8500A; font-weight: 600;">→ </span>Body tension with no physical explanation — debt.</div>
+          </div>
+          <p style="display: {{ proseDisplay }}; font-size: 14px; color: #3A3835; margin: 14px 0 0 0;">Good news: you don't need to know the original event. You only need to see the payments. That's the first shift — from inside the pattern to an inch above it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- P2 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 8px;">
+    <div onClick="{{ tog_p2 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 16px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 14px; color: #E8500A;">S.2</div>
+      <div style="font-size: 16px; font-weight: 600;">Name your debt-servicing behavior <span style="font-weight: 400; color: #6E6B66;">— embedded → observing</span></div>
+      <div data-plus style="font-size: 22px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_p2 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_p2 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_p2 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 20px 104px; border-top: 1px solid #EAE8E3;">
+          <p style="font-size: 14px; color: #3A3835; margin: 14px 0 0 0;">Everybody has a go-to: numbing, overworking, performing, controlling, helping, self-medicating, withdrawing. Don't judge it. Don't try to stop it. Just name it — write it down, print it, put it where you'll see it. <strong>Naming creates distance, and distance is where all choice lives.</strong> Once you see the behavior isn't just "who you are," it starts to stutter. Not a stop — a stutter. That's perspective doing its work.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- P3 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 8px;">
+    <div onClick="{{ tog_p3 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 16px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 14px; color: #E8500A;">S.3</div>
+      <div style="font-size: 16px; font-weight: 600;">Let your body finish what it started <span style="font-weight: 400; color: #6E6B66;">— unfinished movements, not memories</span></div>
+      <div data-plus style="font-size: 22px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_p3 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_p3 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_p3 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 20px 104px; border-top: 1px solid #EAE8E3;">
+          <p style="font-size: 14px; color: #3A3835; margin: 14px 0 0 0;">The fight you never got to have, the escape you never made, the scream that stayed in your throat, the collapse you never surrendered to — the body has to finish them <em>physically</em>: shaking, tremoring (look up neurogenic tremors / TRE), crying without a story attached, rage moved out through movement.</p>
+          <p style="display: {{ proseDisplay }}; font-size: 14px; color: #3A3835; margin: 14px 0 0 0;"><strong>But never from inside the activation</strong> — that's re-traumatization, a fish swimming faster to stop being wet. Get out first: present enough to feel it, aware enough to watch it move through you. Close enough to feel, far enough to witness — that's the window of tolerance. Tools that expand it: somatic work, structured breath work, vagal toning, extended-exhale protocols, cold exposure. Not wellness trends — things our ancestors did for 10,000+ years. You will never think your way out of debt. You feel your way out, from a vantage point where feeling isn't drowning.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- P4 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 8px;">
+    <div onClick="{{ tog_p4 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 16px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 14px; color: #E8500A;">S.4</div>
+      <div style="font-size: 16px; font-weight: 600;">Stop taking on new debt <span style="font-weight: 400; color: #6E6B66;">— the 10-second rule, daily</span></div>
+      <div data-plus style="font-size: 22px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_p4 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_p4 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_p4 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 20px 104px; border-top: 1px solid #EAE8E3;">
+          <p style="font-size: 14px; color: #3A3835; margin: 14px 0 0 0;">Every "I'm fine" when you're not is a new loan. So: when you feel something, stop and give it <strong>10 seconds</strong>. If you only realize later, take the 10 seconds then. No processing, no understanding, no intellectualizing — just let it land. You become the person who notices instead of the person who reacts (you can still react however you want). <strong>When your nervous system learns feelings are allowed to arrive, it stops storing them.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- P5 -->
+  <div data-card style="background: #FBFAF8; border: 1px solid #DAD7D2; margin-bottom: 8px;">
+    <div onClick="{{ tog_p5 }}" style="display: grid; grid-template-columns: 64px 1fr 32px; align-items: center; gap: 16px; padding: 16px 24px; cursor: pointer;" style-hover="background: #F6F5F2;">
+      <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 14px; color: #E8500A;">S.5</div>
+      <div style="font-size: 16px; font-weight: 600;">Get a witness <span style="font-weight: 400; color: #6E6B66;">— isolation → being seen. The deepest shift of all.</span></div>
+      <div data-plus style="font-size: 22px; font-weight: 300; color: #E8500A; text-align: center; transform: {{ deg_p5 }}; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);">+</div>
+    </div>
+    <div data-c style="display: grid; grid-template-rows: {{ rows_p5 }}; transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);">
+      <div style="overflow: hidden; opacity: {{ op_p5 }}; transition: opacity 0.4s;">
+        <div style="padding: 0 24px 20px 104px; border-top: 1px solid #EAE8E3;">
+          <p style="font-size: 14px; color: #3A3835; margin: 14px 0 0 0;">Almost all emotional debt was created in isolation — alone with something too big for you, even with people around. What the system still holds isn't just emotion; it's the aloneness. The discharge often needs a witness: <strong>not a fixer, not an advice-giver, not someone who reframes your pain into a lesson.</strong> Someone who sits with you while something moves through your body and doesn't try to make it stop. Their presence is a mirror — you finally see what's moving through you without being consumed by it. It's the thing you needed at five and didn't get. Getting it at 30 or 50 won't undo what happened, but it completes something that's been waiting to finish.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="margin-top: 56px; padding-top: 24px; border-top: 2px solid #1A1918; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: baseline;">
+    <p style="margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; max-width: 560px;">The debt is not the enemy.<br />Your fixed position inside the debt is.</p>
+    <div style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; letter-spacing: 0.12em; color: #6E6B66; text-align: right;">“WHY AM I MESSED UP?” → “WHAT DO I OWE?” → “HOW DO I PAY IT BACK?”</div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;startExpanded&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Behavior&quot;}, &quot;quotesOnly&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Content&quot;}}">
+class Component extends DCLogic {
+  state = { open: {} };
+
+  keys() {
+    return ['m1','m2','m3','comp','d1','d2','d3','d4','vs','p1','p2','p3','p4','p5'];
+  }
+
+  isOpen(k) {
+    const v = this.state.open[k];
+    if (v === undefined) return !!this.props.startExpanded;
+    return v;
+  }
+
+  renderVals() {
+    const vals = {};
+    const keys = this.keys();
+    const anyClosed = keys.some((k) => !this.isOpen(k));
+
+    vals.allLabel = anyClosed ? 'EXPAND ALL' : 'COLLAPSE ALL';
+    vals.toggleAll = () => {
+      const open = {};
+      keys.forEach((k) => { open[k] = anyClosed; });
+      this.setState({ open });
+    };
+
+    keys.forEach((k) => {
+      const open = this.isOpen(k);
+      vals['rows_' + k] = open ? '1fr' : '0fr';
+      vals['op_' + k] = open ? 1 : 0;
+      vals['deg_' + k] = open ? 'rotate(45deg)' : 'rotate(0deg)';
+      vals['tog_' + k] = () => {
+        this.setState((s) => ({ open: Object.assign({}, s.open, { [k]: !this.isOpen(k) }) }));
+      };
+    });
+
+    vals.proseDisplay = this.props.quotesOnly ? 'none' : 'block';
+    return vals;
+  }
+}
+</script>
+</body>
+</html>

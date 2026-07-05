@@ -1,4 +1,4 @@
-/* Phoenix Pulsar — app root: the Signal Hub is the whole experience. */
+/* Phoenix Pulsar — app root: desktop Hub or mobile Spine, based on viewport. */
 const { useState: useStateA, useEffect: useEffectA } = React;
 
 if (window.gsap && window.MotionPathPlugin) window.gsap.registerPlugin(window.MotionPathPlugin);
@@ -14,6 +14,19 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "signal": "#1aa6b7",
   "dark": false
 }/*EDITMODE-END*/;
+
+const MOBILE_BREAKPOINT = 768;
+
+function useIsMobile() {
+  const mql = window.matchMedia("(max-width: " + MOBILE_BREAKPOINT + "px)");
+  const [mobile, setMobile] = useStateA(mql.matches);
+  useEffectA(() => {
+    const handler = (e) => setMobile(e.matches);
+    mql.addEventListener("change", handler);
+    return () => mql.removeEventListener("change", handler);
+  }, []);
+  return mobile;
+}
 
 function App() {
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
@@ -67,4 +80,9 @@ function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+function Root() {
+  const isMobile = useIsMobile();
+  return isMobile ? <MobileApp /> : <App />;
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<Root />);
