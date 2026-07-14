@@ -21,7 +21,9 @@ const M_NAV = [
   { id: "contact", label: "Contact", meta: "Transmit", kind: "contact" },
   { id: "github", label: "GitHub", meta: "↗", href: "https://github.com/phoenixpulsar" },
   { id: "notes", label: "Notes", meta: "↗", href: "https://phoenixpulsar.github.io/docs/intro" },
-  { id: "blog", label: "Blog", meta: "↗", href: "https://phoenixpulsar.github.io/blog" },
+  { id: "blog", label: "Blog", meta: "All blogs ↗", href: "https://phoenixpulsar.github.io/all-blogs/" },
+  { id: "spirit", label: "Spirit in the Sky", meta: "Note ↗", href: "https://phoenixpulsar.github.io/docs/notes/spirit-in-the-sky" },
+  { id: "emotional", label: "Emotional Debt", meta: "Note ↗", href: "https://phoenixpulsar.github.io/docs/notes/emotional-debt" },
 ];
 
 function MobileApp() {
