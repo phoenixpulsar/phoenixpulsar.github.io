@@ -39,6 +39,48 @@
   <a href="/notes/emotional-debt/">Emotional Debt</a>
   <a class="active" href="/notes/app-layer/">Why the App Layer Isn't Dead</a>
 </nav>
-<iframe class="fn-frame" src="/docs/notes/app-layer.dc.html" title="Why the App Layer Isn't Dead"></iframe>
+<iframe id="note-frame" class="fn-frame" src="/docs/notes/app-layer.dc.html" title="Why the App Layer Isn't Dead"></iframe>
+<script>
+  /* The embedded note is a self-contained "bundler" page: its unpack script
+     replaces the whole documentElement, so styles injected into the file's
+     own <head> are wiped. Instead, once it has unpacked (its .sc-host appears)
+     we inject — from this same-origin parent — a viewport meta + a responsive
+     override that collapses the fixed 312px left walkthrough sidebar into a
+     stacked top block on phones, so the article reads full-width. */
+  (function () {
+    var frame = document.getElementById("note-frame");
+    var CSS = "@media (max-width:768px){"
+      + ".sc-host>div{flex-direction:column!important;height:auto!important;min-height:100vh;overflow:visible!important;}"
+      + ".sc-host>div>aside{width:100%!important;flex-shrink:1!important;overflow-y:visible!important;padding:18px 18px 14px!important;}"
+      + ".sc-host>div>aside>nav{flex-direction:row!important;flex-wrap:wrap!important;gap:4px!important;margin-top:16px!important;}"
+      + ".sc-host>div>main{flex:1 1 auto!important;overflow-y:visible!important;}"
+      + ".sc-host>div>main>div{max-width:100%!important;padding:26px 18px 60px!important;}}";
+    function apply() {
+      var doc;
+      try { doc = frame.contentDocument; } catch (e) { return; }
+      if (!doc || !doc.head) return;
+      if (!doc.querySelector('meta[name="viewport"]')) {
+        var m = doc.createElement("meta");
+        m.name = "viewport";
+        m.content = "width=device-width, initial-scale=1";
+        doc.head.appendChild(m);
+      }
+      if (doc.querySelector(".sc-host") && !doc.getElementById("pp-mobile-fix")) {
+        var s = doc.createElement("style");
+        s.id = "pp-mobile-fix";
+        s.textContent = CSS;
+        doc.head.appendChild(s);
+      }
+    }
+    /* Poll while the async unpack runs (it swaps the document once); keep
+       re-applying briefly in case the swap lands after a given tick. */
+    var start = Date.now();
+    var timer = setInterval(function () {
+      apply();
+      if (Date.now() - start > 10000) clearInterval(timer);
+    }, 150);
+    frame.addEventListener("load", apply);
+  })();
+</script>
 </body>
 </html>
