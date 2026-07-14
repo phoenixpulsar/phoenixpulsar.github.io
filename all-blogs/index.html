@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>All Blogs | Phoenix Pulsar's Tech Journal</title>
+<meta name="description" content="One index for every Phoenix Pulsar blog — the NEAR tech-journal posts and the standalone field-note blogs, in one place.">
+<meta property="og:title" content="All Blogs | Phoenix Pulsar's Tech Journal">
+<meta property="og:description" content="One index for every Phoenix Pulsar blog — the NEAR tech-journal posts and the standalone field-note blogs, in one place.">
+<meta property="og:image" content="https://phoenixpulsar.github.io/img/logo.jpeg">
+<meta property="og:url" content="https://phoenixpulsar.github.io/all-blogs/">
+<link rel="icon" href="/img/favicon.ico">
+<link rel="canonical" href="https://phoenixpulsar.github.io/all-blogs/">
+<style>
+  :root { --ink:#1A1918; --paper:#F2F1EE; --muted:#6E6B66; --line:#DAD7D2; --accent:#E8500A; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background:var(--paper); color:var(--ink);
+    font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; line-height:1.5; }
+  a { color:inherit; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 64px 32px 96px; }
+  .mono { font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
+  .eyebrow { font-size:11px; letter-spacing:0.14em; color:var(--accent); text-transform:uppercase; margin-bottom:14px; }
+  h1 { font-size:44px; font-weight:700; letter-spacing:-0.02em; margin:0 0 12px; line-height:1.05; }
+  .lead { font-size:17px; color:var(--muted); max-width:620px; margin:0 0 8px; }
+  .group-title { font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);
+    margin:48px 0 4px; padding-bottom:10px; border-bottom:2px solid var(--ink); }
+  ul.blogs { list-style:none; margin:0; padding:0; }
+  li.blog { padding:22px 0; border-bottom:1px solid var(--line); }
+  li.blog a.title { font-size:22px; font-weight:600; text-decoration:none; letter-spacing:-0.01em; }
+  li.blog a.title:hover { color:var(--accent); }
+  li.blog .desc { color:var(--muted); margin:8px 0 0; font-size:15px; max-width:640px; }
+  li.blog .meta { font-size:11px; letter-spacing:0.08em; color:var(--muted); margin-top:10px; }
+  li.blog .badge { display:inline-block; border:1px solid var(--line); padding:2px 8px; border-radius:2px; margin-right:8px; }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="eyebrow mono">Phoenix Pulsar</div>
+    <h1>All Blogs</h1>
+    <p class="lead">Everything I write lives in a few different engines. This is the one page that lists them all — the NEAR tech-journal posts and the standalone field-note blogs.</p>
+
+    <div class="group-title mono">Tech Journal</div>
+    <ul class="blogs">
+      <li class="blog">
+        <a class="title" href="/blog/blog-breakdown/">Blog Breakdown: Unifying My Disjointed Blogs</a>
+        <p class="desc">Why my blogs were scattered across two engines, and how I stitched them into one navigable whole with a shared index and cross-navigation.</p>
+        <div class="meta mono"><span class="badge">DOCUSAURUS</span>2026</div>
+      </li>
+      <li class="blog">
+        <a class="title" href="/blog/nft-auction-ownership">How to check ownership of an NFT in an Auction?</a>
+        <p class="desc">Walking through an auction contract that sells NFTs and how to verify who actually owns the token at each stage.</p>
+        <div class="meta mono"><span class="badge">DOCUSAURUS</span>Dec 28, 2021</div>
+      </li>
+      <li class="blog">
+        <a class="title" href="/blog/block-forever">Do things live in the blockchain forever?</a>
+        <p class="desc">Transactions are immutable, but smart-contract state can be deleted. Untangling what "permanent" really means on NEAR.</p>
+        <div class="meta mono"><span class="badge">DOCUSAURUS</span>Dec 26, 2021</div>
+      </li>
+      <li class="blog">
+        <a class="title" href="/blog/welcome">Welcome</a>
+        <p class="desc">Why this tech journal exists — a personal repository for bookmarking concepts, rephrasing ideas, and building cheat sheets.</p>
+        <div class="meta mono"><span class="badge">DOCUSAURUS</span>Aug 26, 2021</div>
+      </li>
+    </ul>
+
+    <div class="group-title mono">Field Notes</div>
+    <ul class="blogs">
+      <li class="blog">
+        <a class="title" href="/docs/notes/spirit-in-the-sky">Spirit in the Sky — The Five Truths</a>
+        <p class="desc">Five truths every wisdom tradition agrees on — a cheat sheet distilled from 190+ ancient and modern texts.</p>
+        <div class="meta mono"><span class="badge">NOTE</span>Cheat sheet</div>
+      </li>
+      <li class="blog">
+        <a class="title" href="/docs/notes/emotional-debt">Emotional Debt</a>
+        <p class="desc">Every unprocessed emotion becomes a line of credit your nervous system is silently paying interest on — a field guide.</p>
+        <div class="meta mono"><span class="badge">NOTE</span>Cheat sheet</div>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>

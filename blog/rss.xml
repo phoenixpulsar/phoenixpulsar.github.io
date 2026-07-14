@@ -4,10 +4,18 @@
         <title>Phoenix Pulsar's Tech Journal Blog</title>
         <link>https://phoenixpulsar.github.io/blog</link>
         <description>Phoenix Pulsar's Tech Journal Blog</description>
-        <lastBuildDate>Tue, 28 Dec 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 14 Jul 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Blog Breakdown: Unifying My Disjointed Blogs]]></title>
+            <link>https://phoenixpulsar.github.io/blog/blog-breakdown/</link>
+            <guid>https://phoenixpulsar.github.io/blog/blog-breakdown/</guid>
+            <pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Why my blogs were scattered across two engines, and how I stitched them into one navigable whole with a shared index and cross-navigation.]]></description>
+            <content:encoded><![CDATA[<p>My writing had quietly sprawled across two completely different engines. This post breaks down what was scattered — Docusaurus tech-journal posts, a hand-authored React hub, and two standalone field-note blogs — and how I pulled it back together with a unified <a href="https://phoenixpulsar.github.io/all-blogs/">all-blogs index</a> and a shared cross-navigation bar on every blog.</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[How to check ownership of an NFT in an Auction?]]></title>
             <link>https://phoenixpulsar.github.io/blog/nft-auction-ownership</link>
