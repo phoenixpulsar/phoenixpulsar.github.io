@@ -17,6 +17,14 @@
   html, body { margin:0; padding:0; background:var(--paper); color:var(--ink);
     font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; line-height:1.5; }
   a { color:inherit; }
+  .topnav { display:flex; align-items:center; gap:6px 15px; flex-wrap:wrap;
+    background:var(--ink); color:var(--paper); border-bottom:2px solid var(--accent);
+    padding:11px 18px; font-size:12px; letter-spacing:0.04em; }
+  .topnav a { color:var(--paper); text-decoration:none; opacity:0.82;
+    border-bottom:1px solid transparent; padding-bottom:1px; white-space:nowrap; }
+  .topnav a:hover { opacity:1; border-bottom-color:var(--accent); }
+  .topnav a.active { color:var(--accent); opacity:1; }
+  .topnav .brand { color:var(--accent); text-transform:uppercase; letter-spacing:0.14em; margin-right:2px; }
   .wrap { max-width: 920px; margin: 0 auto; padding: 64px 32px 96px; }
   .mono { font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
   .eyebrow { font-size:11px; letter-spacing:0.14em; color:var(--accent); text-transform:uppercase; margin-bottom:14px; }
@@ -34,6 +42,14 @@
 </style>
 </head>
 <body>
+  <nav class="topnav mono" aria-label="Site navigation">
+    <span class="brand">Phoenix Pulsar</span>
+    <a href="https://phoenixpulsar.github.io/">Hub</a>
+    <a class="active" href="/all-blogs/">All Blogs</a>
+    <a href="/blog">Tech Journal</a>
+    <a href="/notes/">Field Notes</a>
+    <a href="https://github.com/phoenixpulsar">GitHub</a>
+  </nav>
   <main class="wrap">
     <div class="eyebrow mono">Phoenix Pulsar</div>
     <h1>All Blogs</h1>
@@ -66,16 +82,23 @@
     <div class="group-title mono">Field Notes</div>
     <ul class="blogs">
       <li class="blog">
-        <a class="title" href="/docs/notes/spirit-in-the-sky">Spirit in the Sky — The Five Truths</a>
+        <a class="title" href="/notes/spirit-in-the-sky/">Spirit in the Sky — The Five Truths</a>
         <p class="desc">Five truths every wisdom tradition agrees on — a cheat sheet distilled from 190+ ancient and modern texts.</p>
         <div class="meta mono"><span class="badge">NOTE</span>Cheat sheet</div>
       </li>
       <li class="blog">
-        <a class="title" href="/docs/notes/emotional-debt">Emotional Debt</a>
+        <a class="title" href="/notes/emotional-debt/">Emotional Debt</a>
         <p class="desc">Every unprocessed emotion becomes a line of credit your nervous system is silently paying interest on — a field guide.</p>
         <div class="meta mono"><span class="badge">NOTE</span>Cheat sheet</div>
       </li>
+      <li class="blog">
+        <a class="title" href="/notes/app-layer/">Why the App Layer Isn't Dead</a>
+        <p class="desc">Why the application layer still matters as foundation models absorb more of the stack — where durable product value actually accrues.</p>
+        <div class="meta mono"><span class="badge">NOTE</span>Essay</div>
+      </li>
     </ul>
+
+    <p class="lead" style="margin-top:40px;"><a class="mono" href="/notes/" style="color:var(--accent);text-decoration:none;letter-spacing:0.06em;font-size:13px;">Browse all field notes full-screen →</a></p>
   </main>
 </body>
 </html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Field Notes | Phoenix Pulsar</title>
+<meta name="description" content="Standalone field notes — bespoke, full-screen cheat sheets and essays that live outside the tech journal.">
+<meta property="og:title" content="Field Notes | Phoenix Pulsar">
+<meta property="og:description" content="Standalone field notes — bespoke, full-screen cheat sheets and essays that live outside the tech journal.">
+<meta property="og:image" content="https://phoenixpulsar.github.io/img/logo.jpeg">
+<meta property="og:url" content="https://phoenixpulsar.github.io/notes/">
+<link rel="icon" href="/img/favicon.ico">
+<link rel="canonical" href="https://phoenixpulsar.github.io/notes/">
+<style>
+  :root { --ink:#1A1918; --paper:#F2F1EE; --muted:#6E6B66; --line:#DAD7D2; --accent:#E8500A; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background:var(--paper); color:var(--ink);
+    font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; line-height:1.5; }
+  a { color:inherit; }
+  .mono { font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
+  .topnav { display:flex; align-items:center; gap:6px 15px; flex-wrap:wrap;
+    background:var(--ink); color:var(--paper); border-bottom:2px solid var(--accent);
+    padding:11px 18px; font-size:12px; letter-spacing:0.04em; }
+  .topnav a { color:var(--paper); text-decoration:none; opacity:0.82;
+    border-bottom:1px solid transparent; padding-bottom:1px; white-space:nowrap; }
+  .topnav a:hover { opacity:1; border-bottom-color:var(--accent); }
+  .topnav a.active { color:var(--accent); opacity:1; }
+  .topnav .brand { color:var(--accent); text-transform:uppercase; letter-spacing:0.14em; margin-right:2px; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 64px 32px 96px; }
+  .eyebrow { font-size:11px; letter-spacing:0.14em; color:var(--accent); text-transform:uppercase; margin-bottom:14px; }
+  h1 { font-size:44px; font-weight:700; letter-spacing:-0.02em; margin:0 0 12px; line-height:1.05; }
+  .lead { font-size:17px; color:var(--muted); max-width:640px; margin:0 0 8px; }
+  ul.notes { list-style:none; margin:36px 0 0; padding:0; }
+  li.note { padding:24px 0; border-bottom:1px solid var(--line); }
+  li.note a.title { font-size:24px; font-weight:600; text-decoration:none; letter-spacing:-0.01em; }
+  li.note a.title:hover { color:var(--accent); }
+  li.note .desc { color:var(--muted); margin:8px 0 0; font-size:15px; max-width:660px; }
+  li.note .meta { font-size:11px; letter-spacing:0.08em; color:var(--muted); margin-top:10px; }
+  li.note .badge { display:inline-block; border:1px solid var(--line); padding:2px 8px; border-radius:2px; margin-right:8px; }
+</style>
+</head>
+<body>
+  <nav class="topnav mono" aria-label="Field notes navigation">
+    <span class="brand">Field Notes</span>
+    <a href="https://phoenixpulsar.github.io/">Hub</a>
+    <a class="active" href="/notes/">All Notes</a>
+    <a href="/all-blogs/">All Blogs</a>
+    <a href="/blog">Tech Journal</a>
+  </nav>
+  <main class="wrap">
+    <div class="eyebrow mono">Phoenix Pulsar</div>
+    <h1>Field Notes</h1>
+    <p class="lead">Standalone, full-screen notes — bespoke cheat sheets and essays with their own look, kept separate from the tech journal. Each one opens edge-to-edge.</p>
+
+    <ul class="notes">
+      <li class="note">
+        <a class="title" href="/notes/spirit-in-the-sky/">Spirit in the Sky — The Five Truths</a>
+        <p class="desc">Five truths every wisdom tradition agrees on — a cheat sheet distilled from 190+ ancient and modern texts.</p>
+        <div class="meta mono"><span class="badge">NOTE</span>Cheat sheet</div>
+      </li>
+      <li class="note">
+        <a class="title" href="/notes/emotional-debt/">Emotional Debt</a>
+        <p class="desc">Every unprocessed emotion becomes a line of credit your nervous system is silently paying interest on — a field guide.</p>
+        <div class="meta mono"><span class="badge">NOTE</span>Cheat sheet</div>
+      </li>
+      <li class="note">
+        <a class="title" href="/notes/app-layer/">Why the App Layer Isn't Dead</a>
+        <p class="desc">Why the application layer still matters as foundation models absorb more of the stack — where durable product value actually accrues.</p>
+        <div class="meta mono"><span class="badge">NOTE</span>Essay</div>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>

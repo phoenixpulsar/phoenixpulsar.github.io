@@ -22,8 +22,10 @@ const M_NAV = [
   { id: "github", label: "GitHub", meta: "↗", href: "https://github.com/phoenixpulsar" },
   { id: "notes", label: "Notes", meta: "↗", href: "https://phoenixpulsar.github.io/docs/intro" },
   { id: "blog", label: "Blog", meta: "All blogs ↗", href: "https://phoenixpulsar.github.io/all-blogs/" },
-  { id: "spirit", label: "Spirit in the Sky", meta: "Note ↗", href: "https://phoenixpulsar.github.io/docs/notes/spirit-in-the-sky" },
-  { id: "emotional", label: "Emotional Debt", meta: "Note ↗", href: "https://phoenixpulsar.github.io/docs/notes/emotional-debt" },
+  { id: "notesindex", label: "Field Notes", meta: "All notes ↗", href: "https://phoenixpulsar.github.io/notes/" },
+  { id: "spirit", label: "Spirit in the Sky", meta: "Note ↗", href: "https://phoenixpulsar.github.io/notes/spirit-in-the-sky/" },
+  { id: "emotional", label: "Emotional Debt", meta: "Note ↗", href: "https://phoenixpulsar.github.io/notes/emotional-debt/" },
+  { id: "applayer", label: "Why the App Layer Isn't Dead", meta: "Note ↗", href: "https://phoenixpulsar.github.io/notes/app-layer/" },
 ];
 
 function MobileApp() {
