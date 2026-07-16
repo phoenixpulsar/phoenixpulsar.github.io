@@ -11,9 +11,6 @@ window.HUB_NAV = [
   { id: "github", type: "nav", label: "GitHub", href: "https://github.com/phoenixpulsar", ext: true },
   { id: "notes",  type: "nav", label: "Notes",  href: "https://phoenixpulsar.github.io/docs/intro", ext: true },
   { id: "blog",   type: "nav", label: "Blog",   href: "https://phoenixpulsar.github.io/all-blogs/", ext: true },
-  { id: "spirit", type: "nav", label: "Spirit in the Sky", href: "https://phoenixpulsar.github.io/notes/spirit-in-the-sky/", ext: true },
-  { id: "emotional", type: "nav", label: "Emotional Debt", href: "https://phoenixpulsar.github.io/notes/emotional-debt/", ext: true },
-  { id: "applayer", type: "nav", label: "App Layer", href: "https://phoenixpulsar.github.io/notes/app-layer/", ext: true },
 ];
 
 /* ---- curated polar placement.  a = angle in degrees, y-UP convention
@@ -34,9 +31,6 @@ window.HUB_POS = {
   about:          { a: 88,   rf: 0.58, tier: 0, curve:  0.00, nav: true },
   github:         { a: 128,  rf: 0.54, tier: 0, curve: -0.10, nav: true },
   blog:           { a: 158,  rf: 0.60, tier: 0, curve:  0.10, nav: true },
-  spirit:         { a: 14,   rf: 0.50, tier: 0, curve:  0.10, nav: true },
-  emotional:      { a: -14,  rf: 0.52, tier: 0, curve: -0.10, nav: true },
-  applayer:       { a: -40,  rf: 0.50, tier: 0, curve:  0.10, nav: true },
   contact:        { a: -75,  rf: 0.62, tier: 0, curve: -0.08, nav: true },
 };
 
