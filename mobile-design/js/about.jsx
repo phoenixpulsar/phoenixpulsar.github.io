@@ -12,7 +12,7 @@ const PP_ABOUT = {
   tldr: {
     label: "TL;DR",
     blocks: [
-      { t: "lead", x: "I build useful software: bots, AI tools, data interfaces, games, on-chain experiments, and small machines that remove friction from modern life." },
+      { t: "lead", x: "Passionate about how to use AI and visualization to reduce cognitive load around complex systems." },
     ],
   },
   small: {

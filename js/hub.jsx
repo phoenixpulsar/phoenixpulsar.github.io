@@ -366,7 +366,7 @@ function Hub({ tw }) {
             {!isSpine && index && (
               <div className="hub-bio" style={{ left: index.bio.x, top: index.bio.y, width: index.bio.w, opacity: bioOpacity, pointerEvents: bioOn ? "auto" : "none" }}>
                 <span className="hb-kicker">The signal</span>
-                <p className="hb-lead">I build useful software: bots, AI tools, data interfaces, games, on-chain experiments, and small machines that remove friction from modern life.</p>
+                <p className="hb-lead">Passionate about how to use AI and visualization to reduce cognitive load around complex systems.</p>
                 <p className="hb-mantra">Find friction. Cut it open.<br />Build the machine.<br />Ship before the idea gets bored.</p>
                 <button className="hb-more" type="button" onClick={openAbout}>Read the full story <span aria-hidden>→</span></button>
               </div>
