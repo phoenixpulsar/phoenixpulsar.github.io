@@ -18,6 +18,7 @@ const M_FILTERS = [
 
 const M_NAV = [
   { id: "about", label: "About", meta: "The signal", kind: "about" },
+  { id: "books", label: "Books", meta: "Reading", kind: "books" },
   { id: "contact", label: "Contact", meta: "Transmit", kind: "contact" },
   { id: "github", label: "GitHub", meta: "↗", href: "https://github.com/phoenixpulsar" },
   { id: "notes", label: "Notes", meta: "↗", href: "https://phoenixpulsar.github.io/docs/intro" },
@@ -145,12 +146,14 @@ function MobileApp() {
 
   function onNav(n) {
     if (n.kind === "about") return setOverlay({ type: "about" });
+    if (n.kind === "books") return setOverlay({ type: "books" });
     if (n.kind === "contact") return setOverlay({ type: "contact" });
     if (n.href) window.open(n.href, "_blank", "noopener");
   }
 
   const inProject = overlay && overlay.type === "project";
   const inAbout = overlay && overlay.type === "about";
+  const inBooks = overlay && overlay.type === "books";
   const inContact = overlay && overlay.type === "contact";
 
   return (
@@ -256,6 +259,21 @@ function MobileApp() {
             </div>
             <div className="about-overlay-inner">
               <AboutSection />
+            </div>
+          </React.Fragment>
+        )}
+      </div>
+
+      <div className={"detail" + (inBooks ? " open" : "")} data-screen-label="Books">
+        {inBooks && (
+          <React.Fragment>
+            <div className="detail-bar">
+              <button className="detail-close" onClick={close}><span aria-hidden>←</span> Back</button>
+              <Pulsar size={20} />
+              <span className="db-name">Books · currently reading</span>
+            </div>
+            <div className="about-overlay-inner">
+              <BooksSection />
             </div>
           </React.Fragment>
         )}

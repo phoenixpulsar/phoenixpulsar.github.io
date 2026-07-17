@@ -57,6 +57,7 @@ function Hub({ tw }) {
   const scrimRef = useRefH(null);
   const detailRef = useRefH(null);
   const aboutRef = useRefH(null);
+  const booksRef = useRefH(null);
   const contactRef = useRefH(null);
   const flipOriginRef = useRefH(null);
 
@@ -251,6 +252,7 @@ function Hub({ tw }) {
     send({ type: "OPEN_PROJECT", project });
   }
   function openAbout() { document.body.style.overflow = "hidden"; send("OPEN_ABOUT"); }
+  function openBooks() { document.body.style.overflow = "hidden"; send("OPEN_BOOKS"); }
   function openContact() { document.body.style.overflow = "hidden"; send("OPEN_CONTACT"); }
   function closeOverlay() {
     document.body.style.overflow = "";
@@ -260,7 +262,7 @@ function Hub({ tw }) {
       if (!g || reduce) { scrim.style.opacity = 0; }
       else { g.to(scrim, { opacity: 0, duration: 0.3, ease: "power2.out", onComplete: () => g.set(scrim, { clearProps: "opacity" }) }); }
     }
-    [detailRef.current, aboutRef.current, contactRef.current].forEach((el) => {
+    [detailRef.current, aboutRef.current, booksRef.current, contactRef.current].forEach((el) => {
       if (!el) return;
       if (g) g.set(el, { clearProps: "opacity,transform" });
       else { el.style.opacity = ""; el.style.transform = ""; }
@@ -270,12 +272,14 @@ function Hub({ tw }) {
   function onNodeActivate(n, el) {
     if (n.type === "project") return openProject(n.project, el);
     if (n.kind === "about") return openAbout();
+    if (n.kind === "books") return openBooks();
     if (n.kind === "contact") return openContact();
     if (n.href) window.open(n.href, "_blank", "noopener");
   }
 
   const inDetail = state.matches("projectDetail");
   const inAbout = state.matches("about");
+  const inBooks = state.matches("books");
   const inContact = state.matches("contact");
   const project = state.context.project;
 
@@ -304,23 +308,23 @@ function Hub({ tw }) {
 
   /* about / contact entrance */
   useEffectH(() => {
-    const which = inAbout ? aboutRef.current : inContact ? contactRef.current : null;
+    const which = inAbout ? aboutRef.current : inBooks ? booksRef.current : inContact ? contactRef.current : null;
     if (!which) return;
     const g = window.gsap, reduce = prefersReduced();
     which.scrollTop = 0;
     if (!g || reduce) { if (scrimRef.current) scrimRef.current.style.opacity = 1; return; }
     g.fromTo(scrimRef.current, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.out" });
     g.fromTo(which, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" });
-  }, [inAbout, inContact]);
+  }, [inAbout, inBooks, inContact]);
 
   /* esc closes any overlay */
   useEffectH(() => {
-    const h = (e) => { if (e.key === "Escape" && (inDetail || inAbout || inContact)) closeOverlay(); };
+    const h = (e) => { if (e.key === "Escape" && (inDetail || inAbout || inBooks || inContact)) closeOverlay(); };
     window.addEventListener("keydown", h);
     return () => window.removeEventListener("keydown", h);
-  }, [inDetail, inAbout, inContact]);
+  }, [inDetail, inAbout, inBooks, inContact]);
 
-  const overlayUp = inDetail || inAbout || inContact;
+  const overlayUp = inDetail || inAbout || inBooks || inContact;
   const visibleFilters = useMemoH(() => {
     const present = new Set((window.PP_PROJECTS || []).map((p) => p.status));
     return HUB_FILTERS.filter((f) => f.id === "all" || present.has(f.id));
@@ -435,6 +439,16 @@ function Hub({ tw }) {
         </div>
         <div className="about-overlay-inner">
           <AboutSection />
+        </div>
+      </div>
+      <div className={`detail ${inBooks ? "open" : ""}`} ref={booksRef}>
+        <div className="detail-bar">
+          <button className="detail-close" onClick={closeOverlay}><span aria-hidden>←</span> Back</button>
+          <Pulsar size={20} />
+          <span className="db-name">Books · currently reading</span>
+        </div>
+        <div className="about-overlay-inner">
+          {inBooks && <BooksSection />}
         </div>
       </div>
       <div className={`detail ${inContact ? "open" : ""}`} ref={contactRef}>
