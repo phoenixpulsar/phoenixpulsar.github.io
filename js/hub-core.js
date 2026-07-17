@@ -7,6 +7,7 @@
 /* ---- utility nav nodes (the inner "crown") ---- */
 window.HUB_NAV = [
   { id: "about",  type: "nav", label: "About",  kind: "about" },
+  { id: "books",  type: "nav", label: "Books",  kind: "books" },
   { id: "contact", type: "nav", label: "Contact", kind: "contact" },
   { id: "github", type: "nav", label: "GitHub", href: "https://github.com/phoenixpulsar", ext: true },
   { id: "notes",  type: "nav", label: "Notes",  href: "https://phoenixpulsar.github.io/docs/intro", ext: true },
@@ -29,6 +30,7 @@ window.HUB_POS = {
   /* nav — inner crown */
   notes:          { a: 40,   rf: 0.54, tier: 0, curve:  0.10, nav: true },
   about:          { a: 88,   rf: 0.58, tier: 0, curve:  0.00, nav: true },
+  books:          { a: 108,  rf: 0.56, tier: 0, curve:  0.00, nav: true },
   github:         { a: 128,  rf: 0.54, tier: 0, curve: -0.10, nav: true },
   blog:           { a: 158,  rf: 0.60, tier: 0, curve:  0.10, nav: true },
   contact:        { a: -75,  rf: 0.62, tier: 0, curve: -0.08, nav: true },
@@ -197,6 +199,7 @@ window.createHubMachine = function () {
           on: {
             OPEN_PROJECT: { target: "projectDetail", actions: "setProject" },
             OPEN_ABOUT: "about",
+            OPEN_BOOKS: "books",
             OPEN_CONTACT: "contact",
           },
         },
@@ -204,6 +207,7 @@ window.createHubMachine = function () {
           on: {
             OPEN_PROJECT: { target: "projectDetail", actions: "setProject", internal: false },
             OPEN_ABOUT: "about",
+            OPEN_BOOKS: "books",
             OPEN_CONTACT: "contact",
             CLOSE: "closing",
           },
@@ -211,6 +215,15 @@ window.createHubMachine = function () {
         about: {
           on: {
             OPEN_PROJECT: { target: "projectDetail", actions: "setProject" },
+            OPEN_BOOKS: "books",
+            OPEN_CONTACT: "contact",
+            CLOSE: "closing",
+          },
+        },
+        books: {
+          on: {
+            OPEN_PROJECT: { target: "projectDetail", actions: "setProject" },
+            OPEN_ABOUT: "about",
             OPEN_CONTACT: "contact",
             CLOSE: "closing",
           },
@@ -219,6 +232,7 @@ window.createHubMachine = function () {
           on: {
             OPEN_PROJECT: { target: "projectDetail", actions: "setProject" },
             OPEN_ABOUT: "about",
+            OPEN_BOOKS: "books",
             CLOSE: "closing",
           },
         },

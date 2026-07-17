@@ -108,3 +108,58 @@
   .depth-seg { padding: 9px 10px; flex: 1; text-align: center; }
   .about-head { gap: 18px; }
 }
+
+/* ============================================================
+   Books — reading log (rendered inside .about-overlay-inner)
+   ============================================================ */
+.books { max-width: 920px; margin: 0 auto; }
+
+.books-head { margin-bottom: 22px; }
+.books-head h2 {
+  font-size: clamp(26px, 3.4vw, 40px); font-weight: 600; letter-spacing: -0.035em;
+  margin: 0; line-height: 1.05;
+}
+.books-kicker { display: flex; align-items: center; gap: 13px; margin-bottom: 16px; }
+.books-kicker .line { width: 34px; height: 1px; background: var(--hairline-strong); }
+.books-kicker .kicker {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* disclaimer / lead note */
+.bk-lead {
+  font-family: var(--mono); font-size: 14px; line-height: 1.7; color: var(--ink-2);
+  max-width: 62ch; margin: 0 0 clamp(26px, 4vh, 40px);
+  padding-left: 18px; border-left: 2px solid var(--signal);
+  text-wrap: pretty;
+}
+
+.books-flow { display: flex; flex-direction: column; }
+
+/* book entries — title emphasized, author muted */
+.bk-list { list-style: none; margin: 0 0 8px; padding: 0; display: flex; flex-direction: column; }
+.bk {
+  display: flex; flex-direction: column; gap: 3px;
+  padding: 16px 0; border-top: 1px solid var(--hairline);
+  will-change: opacity, transform;
+}
+.bk-list .bk:last-child { border-bottom: 1px solid var(--hairline); }
+.bk-title {
+  font-size: 18px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.3; color: var(--ink);
+}
+.bk-author { font-family: var(--mono); font-size: 12.5px; letter-spacing: .02em; color: var(--muted); }
+.bk-tag {
+  font-size: 14px; line-height: 1.5; color: var(--ink-2); font-style: italic; margin-top: 4px;
+}
+
+/* "Currently reading" subheading */
+.bk-group {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--signal); font-weight: 500; margin: 34px 0 2px;
+  display: flex; align-items: center; gap: 12px;
+}
+.bk-group::after { content: ""; flex: 1; height: 1px; background: var(--hairline); }
+
+@media (max-width: 560px){
+  .bk-title { font-size: 16.5px; }
+}
